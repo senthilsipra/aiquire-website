@@ -54,14 +54,15 @@ export function generateStaticParams() {
 
 /* ── Metadata ── */
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { vertical: string };
-}): Metadata {
-  const industry = industries.find((ind) => ind.slug === params.vertical);
+  params: Promise<{ vertical: string }>;
+}): Promise<Metadata> {
+  const { vertical } = await params;
+  const industry = industries.find((ind) => ind.slug === vertical);
   if (!industry) return {};
-  const url = `/industries/${params.vertical}`;
+  const url = `/industries/${vertical}`;
   return {
     title: `${industry.name} — AIQUIRE`,
     description: industry.tagline,
@@ -76,12 +77,13 @@ export function generateMetadata({
 
 /* ── Page ── */
 
-export default function IndustryPage({
+export default async function IndustryPage({
   params,
 }: {
-  params: { vertical: string };
+  params: Promise<{ vertical: string }>;
 }) {
-  const industry = industries.find((ind) => ind.slug === params.vertical);
+  const { vertical } = await params;
+  const industry = industries.find((ind) => ind.slug === vertical);
   if (!industry) notFound();
 
   const extras = industryExtras[industry.slug];
@@ -94,7 +96,7 @@ export default function IndustryPage({
     .filter(Boolean) as (typeof services)[number][];
 
   const industryNumber =
-    industries.findIndex((ind) => ind.slug === params.vertical) + 1;
+    industries.findIndex((ind) => ind.slug === vertical) + 1;
 
   return (
     <>

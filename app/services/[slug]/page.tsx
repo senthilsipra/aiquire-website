@@ -155,14 +155,15 @@ export function generateStaticParams() {
 
 /* ── Metadata ── */
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const practice = services.find((s) => s.slug === params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const practice = services.find((s) => s.slug === slug);
   if (!practice) return {};
-  const url = `/services/${params.slug}`;
+  const url = `/services/${slug}`;
   return {
     title: `${practice.name} — AIQUIRE`,
     description: `${practice.tagline} ${practice.overview}`,
@@ -177,22 +178,23 @@ export function generateMetadata({
 
 /* ── Page ── */
 
-export default function ServicePage({
+export default async function ServicePage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const practice = services.find((s) => s.slug === params.slug);
+  const { slug } = await params;
+  const practice = services.find((s) => s.slug === slug);
   if (!practice) notFound();
 
   const extras = practiceExtras[practice.slug];
   if (!extras) notFound();
 
   const relatedPkgs = extras.relatedPackageSlugs
-    .map((slug) => packages.find((p) => p.slug === slug))
+    .map((s) => packages.find((p) => p.slug === s))
     .filter(Boolean) as (typeof packages)[number][];
 
-  const practiceNumber = services.findIndex((s) => s.slug === params.slug) + 1;
+  const practiceNumber = services.findIndex((s) => s.slug === slug) + 1;
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
