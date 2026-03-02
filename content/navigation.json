@@ -1,0 +1,50 @@
+{
+  "main_nav": [
+    { "label": "Services", "href": "/services" },
+    { "label": "Packages", "href": "/packages" },
+    { "label": "Industries", "href": "/industries" },
+    { "label": "Claude Training", "href": "/claude-training" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "services_dropdown": [
+    { "label": "AI Strategy & Discovery", "href": "/services/ai-strategy" },
+    { "label": "AI Productivity & Copilots", "href": "/services/ai-productivity" },
+    { "label": "Customer & Revenue AI", "href": "/services/customer-revenue-ai" },
+    { "label": "Operations & Intelligence", "href": "/services/operations-intelligence" },
+    { "label": "Custom AI Development", "href": "/services/custom-ai-development" }
+  ],
+  "claude_training_dropdown": [
+    { "label": "Business Track", "href": "/claude-training/business-track" },
+    { "label": "Engineering Track", "href": "/claude-training/engineering-track" }
+  ],
+  "footer": {
+    "navigate": [
+      { "label": "Home", "href": "/" },
+      { "label": "Services", "href": "/services" },
+      { "label": "Packages", "href": "/packages" },
+      { "label": "Industries", "href": "/industries" },
+      { "label": "Claude Training", "href": "/claude-training" },
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "resources": [
+      { "label": "AI Strategy & Discovery", "href": "/services/ai-strategy" },
+      { "label": "AI Productivity & Copilots", "href": "/services/ai-productivity" },
+      { "label": "Customer & Revenue AI", "href": "/services/customer-revenue-ai" },
+      { "label": "Operations & Intelligence", "href": "/services/operations-intelligence" },
+      { "label": "Custom AI Development", "href": "/services/custom-ai-development" }
+    ],
+    "legal": [
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "Terms of Service", "href": "/terms" }
+    ]
+  },
+  "cta": {
+    "label": "Talk to an AI Consultant",
+    "href": "/contact"
+  },
+  "external": {
+    "siprahub": { "label": "Siprahub", "href": "https://siprahub.com" }
+  }
+}

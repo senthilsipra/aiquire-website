@@ -1,0 +1,185 @@
+[
+  {
+    "id": 1,
+    "name": "AI Starter Sprint",
+    "slug": "ai-starter-sprint",
+    "tier": "entry",
+    "tagline": "The no-commitment starting point. A paid discovery sprint where we assess your AI landscape, run a focused opportunity mapping session, and hand you a concrete action plan.",
+    "price_min": 4000,
+    "price_max": 6000,
+    "currency": "USD",
+    "duration": "1 week",
+    "ideal_for": [
+      "Growing SMBs exploring AI for the first time"
+    ],
+    "inclusions": [
+      "AI landscape assessment",
+      "Opportunity mapping workshop",
+      "Prioritised action plan",
+      "Tool recommendations"
+    ],
+    "next_steps": null,
+    "cta": "Talk to an AI Consultant"
+  },
+  {
+    "id": 2,
+    "name": "AI Jumpstart",
+    "slug": "ai-jumpstart",
+    "tier": "entry",
+    "tagline": "From confused to confident. The complete strategic foundation for your AI journey.",
+    "price_min": 12000,
+    "price_max": 18000,
+    "currency": "USD",
+    "duration": "2–3 weeks",
+    "ideal_for": [
+      "Companies that know they need AI but don't know where to start"
+    ],
+    "inclusions": [
+      "AI Readiness Assessment",
+      "AI Opportunity Mapping Workshop",
+      "90-Day Roadmap",
+      "Tool Recommendations",
+      "Executive Presentation"
+    ],
+    "next_steps": "AI Quick Win or full implementation",
+    "cta": "Talk to an AI Consultant"
+  },
+  {
+    "id": 3,
+    "name": "AI Quick Win",
+    "slug": "ai-quick-win",
+    "tier": "implementation",
+    "tagline": "One high-impact AI implementation, done right. Choose from Copilot deployment, AI chatbot, or process automation.",
+    "price_min": 15000,
+    "price_max": 25000,
+    "currency": "USD",
+    "duration": "3–4 weeks",
+    "ideal_for": [
+      "Companies ready to deploy but needing expert delivery"
+    ],
+    "inclusions": [
+      "One core implementation (Copilot, chatbot, or automation)",
+      "Full configuration and integration",
+      "Team training",
+      "30-day post-deployment support"
+    ],
+    "next_steps": null,
+    "cta": "Talk to an AI Consultant"
+  },
+  {
+    "id": 4,
+    "name": "AI Copilot Bundle",
+    "slug": "ai-copilot-bundle",
+    "tier": "implementation",
+    "tagline": "Productivity AI deployed across your organisation — the fast track to measurable daily efficiency gains.",
+    "price_min": 12000,
+    "price_max": 22000,
+    "currency": "USD",
+    "duration": "2–3 weeks",
+    "ideal_for": [
+      "Companies on M365 or Google Workspace wanting immediate productivity gains"
+    ],
+    "inclusions": [
+      "M365 or Google Workspace AI deployment",
+      "Security configuration and governance",
+      "Hands-on training for all users",
+      "Prompt library",
+      "60-day post-deployment support"
+    ],
+    "next_steps": null,
+    "cta": "Talk to an AI Consultant"
+  },
+  {
+    "id": 5,
+    "name": "AI Customer Service Kit",
+    "slug": "ai-customer-service-kit",
+    "tier": "implementation",
+    "tagline": "24/7 AI customer support without adding headcount. A complete customer service AI stack, deployed and operational.",
+    "price_min": 18000,
+    "price_max": 30000,
+    "currency": "USD",
+    "duration": "3–4 weeks",
+    "ideal_for": [
+      "Companies with support volume but limited staff capacity"
+    ],
+    "inclusions": [
+      "AI chatbot implementation",
+      "Knowledge base setup",
+      "Escalation workflows",
+      "Analytics dashboard",
+      "Training and handoff"
+    ],
+    "next_steps": null,
+    "cta": "Talk to an AI Consultant"
+  },
+  {
+    "id": 6,
+    "name": "AI Sales Accelerator",
+    "slug": "ai-sales-accelerator",
+    "tier": "implementation",
+    "tagline": "AI-powered prospecting, outreach, and sales intelligence. Scale your pipeline without scaling your headcount.",
+    "price_min": 15000,
+    "price_max": 28000,
+    "currency": "USD",
+    "duration": "3–4 weeks",
+    "ideal_for": [
+      "Sales teams wanting to scale outbound without adding reps"
+    ],
+    "inclusions": [
+      "CRM AI enhancement",
+      "Sales assistant tools setup",
+      "Email personalization configuration",
+      "Team training",
+      "Sales playbooks"
+    ],
+    "next_steps": null,
+    "cta": "Talk to an AI Consultant"
+  },
+  {
+    "id": 7,
+    "name": "AI Transformation Starter",
+    "slug": "ai-transformation-starter",
+    "tier": "transformation",
+    "tagline": "The comprehensive AI foundation for Mid-Market organisations serious about transformation. Strategy, implementation, training, and governance — in one structured engagement.",
+    "price_min": 40000,
+    "price_max": 60000,
+    "currency": "USD",
+    "duration": "8–12 weeks",
+    "ideal_for": [
+      "Mid-Market organisations with budget to invest and a mandate to transform"
+    ],
+    "inclusions": [
+      "AI Readiness Assessment",
+      "90-Day Roadmap",
+      "2 core implementations",
+      "Full team training",
+      "AI Policy & Guidelines",
+      "60-day post-deployment support"
+    ],
+    "next_steps": "Managed AI services, security assessment",
+    "cta": "Talk to an AI Consultant"
+  },
+  {
+    "id": 8,
+    "name": "AI with Guardrails",
+    "slug": "ai-with-guardrails",
+    "tier": "transformation",
+    "tagline": "AI deployment built secure from day one. The right package for regulated industries or security-conscious organisations that cannot afford to get governance wrong.",
+    "price_min": 25000,
+    "price_max": 40000,
+    "currency": "USD",
+    "duration": "4–6 weeks",
+    "ideal_for": [
+      "Financial services, healthcare, legal, and other regulated sectors"
+    ],
+    "inclusions": [
+      "AI Readiness Assessment",
+      "One core implementation",
+      "AI Security Assessment (light)",
+      "AI Policy Development",
+      "Full team training"
+    ],
+    "next_steps": null,
+    "cta": "Talk to an AI Consultant"
+  }
+]

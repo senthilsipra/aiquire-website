@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Professional Services",
+    "slug": "professional-services",
+    "tagline": "Law firms, accountancies, consultancies, and agencies share a common challenge: their product is expertise, and AI can either amplify it or commoditise it. We help professional services firms use AI to amplify — automating the time-consuming, freeing the billable.",
+    "use_cases": [
+      "Document drafting and review assistance",
+      "Client communication AI",
+      "AI-powered knowledge management",
+      "Time tracking and billing automation",
+      "Research and precedent search"
+    ],
+    "starting_package": "AI Jumpstart or AI Copilot Bundle",
+    "compliance_notes": "Client confidentiality, privilege, data handling"
+  },
+  {
+    "id": 2,
+    "name": "Financial Services",
+    "slug": "financial-services",
+    "tagline": "Compliance, documentation, and customer service — the three pillars of financial services operations are exactly where AI delivers the most value with the most governance complexity. AIQUIRE navigates both.",
+    "use_cases": [
+      "Document processing and extraction",
+      "AI customer service and onboarding",
+      "Compliance monitoring",
+      "Report generation",
+      "Risk assessment assistance"
+    ],
+    "starting_package": "AI with Guardrails",
+    "compliance_notes": "Financial regulations, audit requirements, data security"
+  },
+  {
+    "id": 3,
+    "name": "Healthcare & Medical",
+    "slug": "healthcare-medical",
+    "tagline": "AI in healthcare requires a different level of care. We work with healthcare providers to implement AI that improves administrative efficiency and staff workflows — with HIPAA compliance and clinical safety front of mind.",
+    "use_cases": [
+      "Patient scheduling AI",
+      "Clinical documentation assistance",
+      "Staff knowledge base",
+      "Administrative automation"
+    ],
+    "starting_package": "AI Jumpstart (with compliance focus)",
+    "compliance_notes": "HIPAA, patient data, clinical decision support rules"
+  },
+  {
+    "id": 4,
+    "name": "E-Commerce & Retail",
+    "slug": "e-commerce-retail",
+    "tagline": "The e-commerce AI opportunity is enormous — and the tools are mature. AIQUIRE helps retailers deploy personalisation, intelligent support, and content generation at the pace the market demands.",
+    "use_cases": [
+      "AI customer service chatbot",
+      "Product recommendation engine",
+      "Marketing content generation",
+      "Customer sentiment monitoring"
+    ],
+    "starting_package": "AI Customer Service Kit",
+    "compliance_notes": "Consumer data privacy, payment security"
+  },
+  {
+    "id": 5,
+    "name": "Technology & SaaS",
+    "slug": "technology-saas",
+    "tagline": "Tech companies are often closest to AI tools and furthest from AI strategy. AIQUIRE helps technology businesses move from ad hoc AI experimentation to systematic AI advantage — across support, sales, and product.",
+    "use_cases": [
+      "AI customer support",
+      "Code assistant deployment",
+      "Sales intelligence tools",
+      "Product analytics AI"
+    ],
+    "starting_package": "AI Quick Win or AI Transformation Starter",
+    "compliance_notes": "Customer data, IP protection, SOC 2"
+  },
+  {
+    "id": 6,
+    "name": "Real Estate",
+    "slug": "real-estate",
+    "tagline": "Speed and personalisation win deals in real estate. AI helps your agents respond faster, qualify better, and create content that converts — without taking their eyes off the client relationship.",
+    "use_cases": [
+      "AI-powered property descriptions",
+      "Lead qualification automation",
+      "Document automation",
+      "Market analysis tools"
+    ],
+    "starting_package": "AI Sales Accelerator",
+    "compliance_notes": "Fair housing compliance, transaction data"
+  },
+  {
+    "id": 7,
+    "name": "Agencies & Marketing",
+    "slug": "agencies-marketing",
+    "tagline": "Creative agencies face relentless content demands. AIQUIRE helps agencies build AI content pipelines that amplify creative output without compromising brand voice or quality standards.",
+    "use_cases": [
+      "Content generation workflows",
+      "Client reporting automation",
+      "Project workflow automation",
+      "Research and insight tools"
+    ],
+    "starting_package": "AI Copilot Bundle",
+    "compliance_notes": "Client confidentiality, brand guidelines"
+  }
+]

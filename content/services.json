@@ -1,0 +1,354 @@
+[
+  {
+    "id": 1,
+    "name": "AI Strategy & Discovery",
+    "slug": "ai-strategy",
+    "tagline": "You can't build what you haven't defined.",
+    "overview": "Before any implementation, AIQUIRE helps you understand where you are, where AI can take you, and exactly how to get there — using Design Thinking to ensure every decision is grounded in your business reality.",
+    "design_thinking_note": "Every strategy engagement is anchored in Design Thinking. This means we start with empathy — understanding your business, your customers, your people — before we ever propose a solution. We use structured ideation workshops, assumption-testing, and rapid prototyping to ensure the strategy we hand you is one that will actually work in your specific context.",
+    "services": [
+      {
+        "code": "ADP-001",
+        "name": "AI Readiness Assessment",
+        "duration": "1–2 weeks",
+        "deliverables": [
+          "Readiness scorecard",
+          "Gap analysis",
+          "Opportunity matrix",
+          "Executive summary"
+        ],
+        "tools": null,
+        "pricing_tier": "Growing SMBs and Mid-Market organisations starting their AI journey"
+      },
+      {
+        "code": "ADP-002",
+        "name": "AI Opportunity Mapping",
+        "duration": "1–2 days",
+        "deliverables": [
+          "Prioritised use case list",
+          "ROI estimates",
+          "Feasibility scores",
+          "Recommendation report"
+        ],
+        "tools": [
+          "Miro",
+          "FigJam"
+        ],
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-003",
+        "name": "AI Roadmap Development",
+        "duration": "2–3 weeks",
+        "deliverables": [
+          "90-day roadmap",
+          "Tool recommendations",
+          "Budget estimates",
+          "Resource plan",
+          "Risk assessment"
+        ],
+        "tools": null,
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-004",
+        "name": "AI Vendor Selection",
+        "duration": "1–2 weeks",
+        "deliverables": [
+          "Vendor comparison matrix",
+          "Recommendation report",
+          "Negotiation support"
+        ],
+        "tools": null,
+        "pricing_tier": null
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "AI Productivity & Copilots",
+    "slug": "ai-productivity",
+    "tagline": "The fastest way to show your organisation what AI can do is to put it in the hands of your people — immediately.",
+    "overview": "AIQUIRE deploys and configures the AI productivity tools your teams are already asking for, with the training and governance to make adoption stick.",
+    "design_thinking_note": "Tool configuration is the easy part. We invest as much effort in change management and training as we do in technical setup — because an AI tool nobody uses is a sunk cost, not an asset. Every deployment includes structured onboarding, a prompt library, and 30 days of post-deployment support.",
+    "services": [
+      {
+        "code": "ADP-010",
+        "name": "Microsoft 365 Copilot Deployment",
+        "duration": "1–2 weeks",
+        "deliverables": [
+          "Configured Copilot environment",
+          "Security policies",
+          "User training",
+          "Adoption playbook"
+        ],
+        "tools": null,
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-011",
+        "name": "Google Workspace AI Deployment",
+        "duration": "1–2 weeks",
+        "deliverables": [
+          "Configured Duet AI",
+          "Admin policies",
+          "User training",
+          "Best practices guide"
+        ],
+        "tools": null,
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-012",
+        "name": "AI Writing & Content Tools Setup",
+        "duration": "1 week",
+        "deliverables": null,
+        "tools": [
+          "Jasper",
+          "Copy.ai",
+          "Writer",
+          "Claude",
+          "ChatGPT Enterprise"
+        ],
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-013",
+        "name": "AI Meeting & Collaboration Tools",
+        "duration": "1 week",
+        "deliverables": null,
+        "tools": [
+          "Otter.ai",
+          "Fireflies",
+          "Fathom",
+          "Zoom AI Companion"
+        ],
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-014",
+        "name": "AI Coding Assistants Deployment",
+        "duration": "1–2 weeks",
+        "deliverables": null,
+        "tools": null,
+        "pricing_tier": "Mid-Market with internal dev teams"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Customer & Revenue AI",
+    "slug": "customer-revenue-ai",
+    "tagline": "The most visible ROI from AI comes at the customer and revenue layer.",
+    "overview": "Whether you need 24/7 support without headcount, smarter prospecting, or AI-powered content at scale — AIQUIRE implements it with the precision your brand demands.",
+    "design_thinking_note": "Before we configure any tool in this practice, we run a customer journey mapping session with your team. We identify the moments where AI creates genuine value — and the moments where it would feel robotic and damage trust. This is the Design Thinking difference: we design for the customer experience first, then choose the technology.",
+    "services": [
+      {
+        "code": "ADP-020",
+        "name": "AI Customer Support Chatbot",
+        "duration": "2–4 weeks",
+        "deliverables": [
+          "Deployed chatbot",
+          "Knowledge base setup",
+          "Escalation workflows",
+          "Analytics dashboard"
+        ],
+        "tools": [
+          "Intercom Fin",
+          "Zendesk AI",
+          "Freshdesk Freddy",
+          "Drift"
+        ],
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-022",
+        "name": "Customer Sentiment Analysis",
+        "duration": "2–3 weeks",
+        "deliverables": [
+          "Sentiment dashboard",
+          "Alert system",
+          "Trend reports",
+          "Integration with existing tools"
+        ],
+        "tools": null,
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-023",
+        "name": "Personalization Engine Setup",
+        "duration": "3–4 weeks",
+        "deliverables": null,
+        "tools": null,
+        "pricing_tier": "Mid-Market e-commerce and SaaS"
+      },
+      {
+        "code": "ADP-030",
+        "name": "CRM AI Enhancement",
+        "duration": "2–3 weeks",
+        "deliverables": null,
+        "tools": [
+          "Salesforce Einstein",
+          "HubSpot AI",
+          "Pipedrive AI"
+        ],
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-031",
+        "name": "AI Sales Assistant",
+        "duration": "2–3 weeks",
+        "deliverables": null,
+        "tools": [
+          "Apollo",
+          "Clay",
+          "Lavender",
+          "Gong",
+          "Chorus"
+        ],
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-032",
+        "name": "AI Content Generation Pipeline",
+        "duration": "2–3 weeks",
+        "deliverables": null,
+        "tools": [
+          "Jasper",
+          "Writer",
+          "Copy.ai",
+          "Claude",
+          "Custom pipelines"
+        ],
+        "pricing_tier": null
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Operations & Intelligence",
+    "slug": "operations-intelligence",
+    "tagline": "The biggest efficiency gains from AI are hiding in your operations.",
+    "overview": "AIQUIRE identifies and eliminates bottlenecks in manual processes, document-heavy workflows, and underutilised data — turning operational drag into competitive advantage.",
+    "design_thinking_note": "Every Operations & Intelligence engagement begins with a process discovery workshop. Using Design Thinking methodology, we map your current workflows, identify friction points, and prioritise automation candidates by effort, impact, and risk. The result: a targeted implementation plan with a clear ROI case — not a wish list.",
+    "services": [
+      {
+        "code": "ADP-040",
+        "name": "AI Process Automation",
+        "duration": "3–4 weeks",
+        "deliverables": null,
+        "tools": [
+          "Zapier",
+          "Make",
+          "n8n",
+          "Power Automate + AI"
+        ],
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-041",
+        "name": "Document Processing AI",
+        "duration": "3–4 weeks",
+        "deliverables": null,
+        "tools": [
+          "Docsumo",
+          "Nanonets",
+          "AWS Textract",
+          "Azure Document Intelligence"
+        ],
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-050",
+        "name": "Internal Knowledge Base AI",
+        "duration": "2–4 weeks",
+        "deliverables": null,
+        "tools": [
+          "Notion AI",
+          "Guru",
+          "Slite",
+          "Confluence + AI",
+          "Custom RAG"
+        ],
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-051",
+        "name": "Custom RAG System",
+        "duration": "4–6 weeks",
+        "deliverables": null,
+        "tools": [
+          "LangChain",
+          "LlamaIndex",
+          "Pinecone",
+          "Weaviate",
+          "OpenAI",
+          "Anthropic"
+        ],
+        "pricing_tier": "Mid-Market organisations with significant internal documentation"
+      },
+      {
+        "code": "ADP-052",
+        "name": "AI-Ready Data Foundation",
+        "duration": "3–4 weeks",
+        "deliverables": null,
+        "tools": null,
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-053",
+        "name": "Business Intelligence + AI",
+        "duration": "3–4 weeks",
+        "deliverables": null,
+        "tools": [
+          "ThoughtSpot",
+          "Power BI Copilot",
+          "Tableau AI",
+          "Metabase"
+        ],
+        "pricing_tier": null
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Custom AI Development",
+    "slug": "custom-ai-development",
+    "tagline": "When off-the-shelf AI tools reach their limits, AIQUIRE builds what doesn't exist yet.",
+    "overview": "Custom AI agents, bespoke workflows, and purpose-built automation — engineered to your exact business requirements.",
+    "design_thinking_note": "Every custom development engagement begins with a structured design sprint — where we define the problem, prototype the solution, and validate it with real users before we write production code. We also apply SentienzBay's security review process to every custom build — because custom AI agents with tool access and API integrations require rigorous testing before they go near production systems.",
+    "services": [
+      {
+        "code": "ADP-060",
+        "name": "Custom AI Agent Development",
+        "duration": "4–8 weeks",
+        "deliverables": [
+          "Custom AI agent",
+          "API integrations",
+          "Admin interface",
+          "Full documentation"
+        ],
+        "tools": [
+          "LangChain",
+          "CrewAI",
+          "AutoGen",
+          "Custom frameworks"
+        ],
+        "pricing_tier": null
+      },
+      {
+        "code": "ADP-061",
+        "name": "AI Workflow Builder",
+        "duration": "3–6 weeks",
+        "deliverables": null,
+        "tools": [
+          "n8n",
+          "Zapier",
+          "Make",
+          "Custom orchestration"
+        ],
+        "pricing_tier": null
+      }
+    ]
+  }
+]

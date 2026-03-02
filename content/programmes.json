@@ -1,0 +1,328 @@
+[
+  {
+    "id": 1,
+    "code": "BT-01",
+    "track": "business",
+    "name": "Claude Foundations for Business",
+    "format": "Half-day workshop, in-person or virtual",
+    "duration": "4 hours",
+    "audience": "All business staff — any role, any department",
+    "level": null,
+    "prerequisite": null,
+    "what_you_learn": [
+      "How Claude processes context and why prompt structure matters",
+      "The difference between asking Claude and working with Claude",
+      "Prompting for different output types: analysis, drafting, summarisation, brainstorming",
+      "How to verify Claude's outputs and manage hallucination risk professionally",
+      "Claude's privacy and data handling — what goes in, what doesn't",
+      "Acceptable use in your organisation's context",
+      "Building a personal prompt library from day one"
+    ],
+    "labs": [],
+    "deliverables": [
+      "Participant prompt library (50+ starter prompts by role)",
+      "Claude quick reference card",
+      "Acceptable use checklist",
+      "Session recording for future onboarding"
+    ]
+  },
+  {
+    "id": 2,
+    "code": "BT-02",
+    "track": "business",
+    "name": "Claude Cowork Deep Dive",
+    "format": "Full-day intensive, in-person or virtual",
+    "duration": "1 day",
+    "audience": "Knowledge workers, analysts, managers, operations teams",
+    "level": null,
+    "prerequisite": "BT-01 or equivalent familiarity with Claude",
+    "what_you_learn": [
+      "Cowork architecture: how it differs from regular Claude chat and why it matters",
+      "Task design: how to brief Cowork for complex, multi-step assignments",
+      "File and folder workflows: letting Claude work directly with your local documents",
+      "Building and using plugins for your specific function (HR, finance, operations, etc.)",
+      "MCP connectors: connecting Cowork to Google Drive, Gmail, Calendar, and other tools your team uses",
+      "Scheduled tasks: setting up automated, recurring AI workflows",
+      "Cross-application workflows: using Claude across Excel, PowerPoint, and documents seamlessly",
+      "Review and quality control: how to supervise Cowork outputs without micromanaging",
+      "What not to delegate: understanding Cowork's current limitations",
+      "Security and data handling in Cowork environments"
+    ],
+    "labs": [
+      "Process and synthesise a set of documents into a structured report",
+      "Build a department-specific plugin using Cowork's Plugin Create tool",
+      "Design an automated weekly reporting workflow",
+      "Connect Cowork to your team's Google Workspace and execute a real task"
+    ],
+    "deliverables": [
+      "Custom plugin template for your department",
+      "Cowork task brief library (20+ templates for common workflows)",
+      "Cowork governance checklist for your team",
+      "Post-workshop 30-day support access"
+    ]
+  },
+  {
+    "id": 3,
+    "code": "BT-03",
+    "track": "business",
+    "name": "Advanced Prompt Engineering for Professionals",
+    "format": "Half-day workshop",
+    "duration": "4 hours",
+    "audience": "Power users, team leads, content teams, analysts",
+    "level": null,
+    "prerequisite": null,
+    "what_you_learn": [
+      "System prompt design: how to create a persistent Claude persona for your function",
+      "Role and context framing: giving Claude the right lens before every task",
+      "Chain-of-thought prompting: making Claude show its reasoning for complex analysis",
+      "Output formatting mastery: getting exactly the structure you need, every time",
+      "Multi-turn conversation design for extended research and analysis tasks",
+      "Few-shot prompting: teaching Claude your standards through examples",
+      "Handling edge cases and steering Claude when it goes off track",
+      "Building a team-wide prompt library with version control and governance"
+    ],
+    "labs": [],
+    "deliverables": [
+      "Advanced prompt template pack (role-specific)",
+      "System prompt library for your team's most common Claude contexts",
+      "Prompt quality rubric for internal review"
+    ]
+  },
+  {
+    "id": 4,
+    "code": "BT-04",
+    "track": "business",
+    "name": "Claude for Specific Business Functions",
+    "format": "Half-day function-specific workshops",
+    "duration": "3–4 hours per function",
+    "audience": "Department-specific cohorts",
+    "level": null,
+    "prerequisite": null,
+    "what_you_learn": [
+      "Marketing & Content: brand-consistent content pipeline, campaign ideation, SEO content at scale, social media calendars, brief-to-deliverable workflows",
+      "Finance & Operations: financial analysis and report drafting, expense report automation, data interpretation, vendor communication, SOP generation",
+      "HR & People: job descriptions, resume screening workflows, employee communication, policy documents, onboarding materials",
+      "Sales: prospect research, proposal drafting, meeting preparation, competitive analysis, CRM note summarisation",
+      "Legal & Compliance: document review, contract drafting, regulatory change monitoring, policy documentation, privilege considerations"
+    ],
+    "labs": [],
+    "deliverables": []
+  },
+  {
+    "id": 5,
+    "code": "BT-05",
+    "track": "business",
+    "name": "AI Governance, Policy & Safe Use",
+    "format": "Half-day workshop",
+    "duration": "3 hours",
+    "audience": "Leadership, IT, compliance, all staff",
+    "level": null,
+    "prerequisite": null,
+    "what_you_learn": [
+      "Claude's data handling: what Anthropic does and doesn't retain from your conversations",
+      "Data classification for Claude: what is safe to input, what must stay out",
+      "Prompt injection risks and how to recognise and prevent them",
+      "Output review standards: when to trust Claude, when to verify, when to reject",
+      "Acceptable use policy framework and how to communicate it",
+      "Incident response: what to do when Claude produces problematic output",
+      "Cowork-specific governance: local file access, data residency, and audit considerations",
+      "Industry-specific regulatory considerations (HIPAA, GDPR, financial regulations)"
+    ],
+    "labs": [],
+    "deliverables": [
+      "Claude acceptable use policy (draft, ready for your legal review)",
+      "Data classification guide for Claude inputs",
+      "Output review checklist by risk level",
+      "Incident response one-pager"
+    ]
+  },
+  {
+    "id": 6,
+    "code": "CC-01",
+    "track": "engineering",
+    "name": "Claude Code Setup & Foundations",
+    "format": "Half-day technical workshop",
+    "duration": "4 hours",
+    "audience": "All developers and engineers new to Claude Code",
+    "level": "Beginner to intermediate",
+    "prerequisite": null,
+    "what_you_learn": [
+      "Claude Code architecture: what it is, how the agentic loop works, and how it differs from IDE plugins",
+      "Installation across macOS, Windows (with Git for Windows), and Linux environments",
+      "Authentication setup with Anthropic API keys, Amazon Bedrock, and Google Vertex AI",
+      "Running Claude Code in the terminal and within VS Code",
+      "Your first real task: asking Claude Code to explain, edit, and commit in a live codebase",
+      "Understanding the permission model: what Claude Code can and cannot do by default",
+      "Reading the session transcript and understanding what Claude Code actually did",
+      "When to use Claude Code vs. Claude.ai vs. Claude Cowork — choosing the right tool"
+    ],
+    "labs": [
+      "From Zero to First Commit: install Claude Code, configure for your environment, complete a real coding task including a file edit and git commit using only natural language commands"
+    ],
+    "deliverables": [
+      "Verified Claude Code installation on each participant's machine",
+      "Claude Code quick reference card (commands, flags, session controls)",
+      "Environment configuration checklist"
+    ]
+  },
+  {
+    "id": 7,
+    "code": "CC-02",
+    "track": "engineering",
+    "name": "CLAUDE.md Mastery & Codebase Configuration",
+    "format": "Half-day technical workshop",
+    "duration": "4 hours",
+    "audience": "Senior developers, tech leads, engineering managers",
+    "level": "Intermediate",
+    "prerequisite": "CC-01 or existing Claude Code familiarity",
+    "what_you_learn": [
+      "What CLAUDE.md is and how Claude Code reads and prioritises it",
+      "Repository-level vs. directory-level CLAUDE.md: when and why to use each",
+      "Architecture documentation that Claude Code can actually use: patterns, anti-patterns, and examples",
+      "Coding conventions and style guides in CLAUDE.md: enforcing your standards automatically",
+      "Dependency and environment documentation: saving Claude Code from asking questions you've already answered",
+      "Sensitive area flagging: directing Claude Code away from files and directories it shouldn't touch",
+      "Common workflows in CLAUDE.md: teaching Claude Code your team's standard operating procedures",
+      "Keeping CLAUDE.md current: ownership, review cadence, and update triggers",
+      "Testing your CLAUDE.md: how to verify it's actually influencing Claude Code's behaviour"
+    ],
+    "labs": [
+      "Build Your CLAUDE.md: each participant (or team) builds a production-ready CLAUDE.md for their actual codebase with structured review and feedback"
+    ],
+    "deliverables": [
+      "Production-ready CLAUDE.md for each team's codebase",
+      "CLAUDE.md template library (by stack: Node.js, Python, React, etc.)",
+      "CLAUDE.md maintenance guide and review checklist"
+    ]
+  },
+  {
+    "id": 8,
+    "code": "CC-03",
+    "track": "engineering",
+    "name": "Agentic Development Workflows",
+    "format": "Full-day intensive workshop",
+    "duration": "1 day",
+    "audience": "Mid to senior developers, tech leads",
+    "level": "Intermediate to advanced",
+    "prerequisite": "CC-01 and CC-02 or equivalent",
+    "what_you_learn": [
+      "The agentic loop: how Claude Code plans, executes, and self-corrects",
+      "Plan mode: using Claude Code's planning phase to review and steer before execution",
+      "Designing effective multi-step task briefs: what makes an agentic task work vs. fail",
+      "Parallel workstreams: running multiple Claude Code agents simultaneously using git worktrees",
+      "Long-running tasks: managing context, interruption, and resumption for extended work",
+      "Headless and automated mode: integrating Claude Code into scripts and pipelines",
+      "Reading and interpreting Claude Code's extended thinking output",
+      "Git workflow integration: branch management, commit conventions, and PR description automation",
+      "Code review assistance: using Claude Code to review its own output and flag risks",
+      "Refactoring at scale: large-scale codebase changes with agentic workflows",
+      "Debug and root cause analysis workflows"
+    ],
+    "labs": [
+      "Design and execute a multi-file refactoring task in plan mode",
+      "Set up parallel agents on separate git worktrees for a feature sprint",
+      "Build a bash script that uses Claude Code in automated mode for a routine task",
+      "Complete a full PR lifecycle — branch, implement, review, and PR description — using only Claude Code"
+    ],
+    "deliverables": [
+      "Agentic task brief template library",
+      "Parallel workflow setup guide for your team's git configuration",
+      "Automated workflow script examples for your common tasks"
+    ]
+  },
+  {
+    "id": 9,
+    "code": "CC-04",
+    "track": "engineering",
+    "name": "MCP Integration & Tool Expansion",
+    "format": "Half-day technical workshop",
+    "duration": "4 hours",
+    "audience": "Senior developers, DevOps, platform engineers",
+    "level": "Advanced",
+    "prerequisite": "CC-01 and CC-02",
+    "what_you_learn": [
+      "MCP architecture: how Claude Code communicates with MCP servers",
+      "Configuring MCP servers in Claude Code: the .claude.json and project-level configuration",
+      "High-value standard MCP integrations: GitHub, filesystem, databases, Slack, Jira",
+      "Wildcard syntax for MCP tool permissions: controlling access at scale",
+      "Building a custom MCP server for an internal API or tool",
+      "Security considerations for MCP: what each server can access and how to limit it",
+      "Testing and debugging MCP integrations",
+      "Managing MCP server versions and updates safely"
+    ],
+    "labs": [
+      "Connect Claude Code to Your Stack: configure Claude Code with the MCP servers most relevant to your team's stack — at minimum GitHub and one internal tool — and execute a real cross-system task"
+    ],
+    "deliverables": [
+      "MCP configuration templates for common engineering stacks",
+      "Custom MCP server starter template",
+      "MCP security review checklist"
+    ]
+  },
+  {
+    "id": 10,
+    "code": "CC-05",
+    "track": "engineering",
+    "name": "Claude Code Security, Guardrails & Enterprise Governance",
+    "format": "Half-day workshop — technical + management audience",
+    "duration": "4 hours",
+    "audience": "Engineering leads, CTOs, DevOps, security teams",
+    "level": "Intermediate to advanced",
+    "prerequisite": null,
+    "what_you_learn": [
+      "Claude Code's permission model in depth: read, write, execute, and network permissions",
+      "Configuring permission rules: allow lists, deny lists, and scope boundaries",
+      "Protecting sensitive files and directories: .gitignore alignment and explicit exclusions",
+      "Credential and secret handling: ensuring API keys, tokens, and credentials never enter Claude Code's context",
+      "Prompt injection risks in agentic systems: what they look like in a Claude Code context and how to prevent them",
+      "Code review requirements: policy for AI-generated code before it enters production branches",
+      "Dependency risk: evaluating packages Claude Code introduces",
+      "Audit trails: logging Claude Code sessions and maintaining accountability for AI-generated changes",
+      "Supply chain considerations: open source packages suggested by Claude Code",
+      "Enterprise network configuration: running Claude Code behind corporate proxies and firewalls",
+      "Defining your organisation's Claude Code acceptable use policy",
+      "Branching and PR policies for AI-assisted development",
+      "Mandatory human review checkpoints in agentic workflows",
+      "Incident response for Claude Code: what to do when it does something unexpected",
+      "Communicating Claude Code policy to your engineering team"
+    ],
+    "labs": [],
+    "deliverables": [
+      "Claude Code security configuration template",
+      "Acceptable use policy for Claude Code (draft)",
+      "AI code review checklist",
+      "Incident response one-pager",
+      "Security audit checklist for existing Claude Code deployments"
+    ]
+  },
+  {
+    "id": 11,
+    "code": "CC-06",
+    "track": "engineering",
+    "name": "CI/CD Integration & Production Best Practices",
+    "format": "Half-day technical workshop",
+    "duration": "4 hours",
+    "audience": "DevOps, platform engineers, senior developers",
+    "level": "Advanced",
+    "prerequisite": "CC-01, CC-02, CC-03",
+    "what_you_learn": [
+      "Running Claude Code in headless and non-interactive mode for automation",
+      "GitHub Actions integration: triggering Claude Code tasks from PR events and workflows",
+      "Automated code review: using Claude Code to flag issues before human review",
+      "Test generation workflows: instructing Claude Code to generate tests as part of the development cycle",
+      "Documentation automation: keeping docs and CLAUDE.md files current with code changes",
+      "Performance and cost management: context window usage, API costs, and rate limit handling in production",
+      "Environment variable and secret management for automated Claude Code runs",
+      "Monitoring and observability: logging Claude Code activity in your production pipeline",
+      "Rollback procedures: what to do when an automated Claude Code change causes issues"
+    ],
+    "labs": [
+      "Build Your First Claude Code CI Workflow: build and test a GitHub Actions workflow that uses Claude Code to perform automated code review on every PR raised against the main branch"
+    ],
+    "deliverables": [
+      "GitHub Actions workflow templates for Claude Code integration",
+      "CI/CD integration guide for your team's pipeline",
+      "Cost and performance optimisation guide"
+    ]
+  }
+]
