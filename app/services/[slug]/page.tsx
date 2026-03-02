@@ -162,9 +162,16 @@ export function generateMetadata({
 }): Metadata {
   const practice = services.find((s) => s.slug === params.slug);
   if (!practice) return {};
+  const url = `/services/${params.slug}`;
   return {
     title: `${practice.name} — AIQUIRE`,
     description: `${practice.tagline} ${practice.overview}`,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${practice.name} — AIQUIRE`,
+      description: `${practice.tagline} ${practice.overview}`,
+      url,
+    },
   };
 }
 
@@ -187,8 +194,25 @@ export default function ServicePage({
 
   const practiceNumber = services.findIndex((s) => s.slug === params.slug) + 1;
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: practice.name,
+    description: `${practice.tagline} ${practice.overview}`,
+    provider: {
+      "@type": "Organization",
+      name: "AIQUIRE",
+      url: "https://aiquire.siprahub.com",
+    },
+    url: `https://aiquire.siprahub.com/services/${practice.slug}`,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       {/* 1. Hero */}
       <SectionWrapper>
         <ScrollAnimation>

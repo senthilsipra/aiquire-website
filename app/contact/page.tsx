@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   title: "Get Started — AIQUIRE",
   description:
     "Talk to an AI Consultant. Not a chatbot. Not a sales rep reading from a script. A consultant who will listen to your business challenge and recommend the right starting point.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Get Started — AIQUIRE",
+    description:
+      "Talk to an AI Consultant. A consultant who will listen to your business challenge and recommend the right starting point.",
+    url: "/contact",
+  },
 };
 
 function formatPrice(value: number): string {
@@ -30,9 +37,44 @@ const packageDescriptions: Record<string, string> = {
   "ai-with-guardrails": "Secure AI",
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What happens when you reach out to AIQUIRE?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We respond within one business day. Every initial conversation is with an experienced AI consultant — not a business development function. The goal of that first conversation is to understand your business, not to sell you a package.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the AI Starter Sprint?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A $4K–$6K, one-week paid discovery sprint. No commitment beyond it. You'll walk away with a concrete AI action plan regardless of what you decide next.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much do AIQUIRE packages cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "AIQUIRE packages range from $4K for an AI Starter Sprint to $60K for an AI Transformation Starter. Every package is fixed-scope with defined deliverables.",
+      },
+    },
+  ],
+};
+
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* 1. Hero */}
       <SectionWrapper>
         <ScrollAnimation>

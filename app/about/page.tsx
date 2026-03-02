@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   title: "About — AIQUIRE",
   description:
     "AIQUIRE was built because the market had a problem: AI expertise without business consulting depth, or business consulting without AI implementation capability. Rarely both. We exist to be both.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About — AIQUIRE",
+    description:
+      "The bridge between business and AI. Design Thinking methodology meets hands-on AI expertise.",
+    url: "/about",
+  },
 };
 
 export default function AboutPage() {
@@ -91,7 +98,7 @@ export default function AboutPage() {
             <ProcessStep
               number="02"
               title="Define"
-              description="Solving the right problem before solving any problem."
+              description="The discipline of solving the right problem before you solve any problem."
               reverse
             />
           </ScrollAnimation>

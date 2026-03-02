@@ -12,6 +12,13 @@ export const metadata: Metadata = {
   title: "Claude Code for Engineering Teams — AIQUIRE",
   description:
     "Claude Code is not a better autocomplete. It is an agentic coding environment that understands your entire codebase. This track teaches your engineering team to work with it as a collaborator.",
+  alternates: { canonical: "/claude-training/engineering-track" },
+  openGraph: {
+    title: "Claude Code for Engineering Teams — AIQUIRE",
+    description:
+      "6 structured programmes from setup to CI/CD integration. Teach your dev team to work with Claude Code as a collaborator.",
+    url: "/claude-training/engineering-track",
+  },
 };
 
 export default function EngineeringTrackPage() {

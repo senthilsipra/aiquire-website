@@ -12,6 +12,13 @@ export const metadata: Metadata = {
   title: "Claude for Business Teams — AIQUIRE",
   description:
     "Knowledge workers who truly understand Claude don't just save time — they produce better work, make better decisions, and operate with a confidence that compounds over time.",
+  alternates: { canonical: "/claude-training/business-track" },
+  openGraph: {
+    title: "Claude for Business Teams — AIQUIRE",
+    description:
+      "From occasional Claude users to daily power users. 5 structured programmes for knowledge workers, analysts, and managers.",
+    url: "/claude-training/business-track",
+  },
 };
 
 export default function BusinessTrackPage() {

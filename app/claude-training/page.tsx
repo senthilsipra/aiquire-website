@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   title: "Claude Training Practice — AIQUIRE",
   description:
     "AIQUIRE's Claude Training Practice is the fastest, most structured way to ensure your business teams and engineering teams don't just use Claude — they master it.",
+  alternates: { canonical: "/claude-training" },
+  openGraph: {
+    title: "Claude Training Practice — AIQUIRE",
+    description:
+      "11 structured training programmes across two tracks. Business teams and engineering teams learn to master Claude.",
+    url: "/claude-training",
+  },
 };
 
 export default function ClaudeTrainingPage() {

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import SectionWrapper from "@/components/aiquire/SectionWrapper";
 import ScrollAnimation from "@/components/aiquire/ScrollAnimation";
@@ -11,6 +12,41 @@ import CTASection from "@/components/aiquire/CTASection";
 import industries from "@/content/industries.json";
 import packages from "@/content/packages.json";
 
+export const metadata: Metadata = {
+  title: "AIQUIRE — Don't Just Adopt AI. AIQUIRE It.",
+  description:
+    "Most businesses experiment with AI. Few truly own it. AIQUIRE bridges the gap between what AI promises and what your business actually needs — combining deep business consulting, proven Design Thinking methodology, and hands-on AI expertise to deliver outcomes that last.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "AIQUIRE — Don't Just Adopt AI. AIQUIRE It.",
+    description:
+      "AI adoption consulting powered by Design Thinking. Strategy, implementation, training, and governance for growing businesses.",
+    url: "/",
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "AIQUIRE",
+  url: "https://aiquire.siprahub.com",
+  description:
+    "AI adoption consulting powered by Design Thinking. Strategy, implementation, training, and governance for growing businesses.",
+  parentOrganization: {
+    "@type": "Organization",
+    name: "Siprahub",
+    url: "https://siprahub.com",
+  },
+  knowsAbout: [
+    "Artificial Intelligence",
+    "AI Strategy",
+    "AI Implementation",
+    "Design Thinking",
+    "Change Management",
+    "Claude Training",
+  ],
+};
+
 export default function Home() {
   const jumpstart = packages.find((p) => p.slug === "ai-jumpstart")!;
   const quickWin = packages.find((p) => p.slug === "ai-quick-win")!;
@@ -20,6 +56,10 @@ export default function Home() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
       {/* 1. Hero */}
       <SectionWrapper>
         <ScrollAnimation>

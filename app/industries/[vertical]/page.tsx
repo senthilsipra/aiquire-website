@@ -61,9 +61,16 @@ export function generateMetadata({
 }): Metadata {
   const industry = industries.find((ind) => ind.slug === params.vertical);
   if (!industry) return {};
+  const url = `/industries/${params.vertical}`;
   return {
     title: `${industry.name} — AIQUIRE`,
     description: industry.tagline,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${industry.name} — AIQUIRE`,
+      description: industry.tagline,
+      url,
+    },
   };
 }
 

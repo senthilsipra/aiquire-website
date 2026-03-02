@@ -12,6 +12,13 @@ export const metadata: Metadata = {
   title: "Packages — AIQUIRE",
   description:
     "Clear Scope. Fixed Price. Real Outcomes. Every AIQUIRE package is a fixed-scope engagement with defined deliverables.",
+  alternates: { canonical: "/packages" },
+  openGraph: {
+    title: "Packages — AIQUIRE",
+    description:
+      "Fixed-scope AI consulting packages from $4K to $60K. Strategy, implementation, training, and governance.",
+    url: "/packages",
+  },
 };
 
 function formatPrice(value: number): string {

@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   title: "Industries — AIQUIRE",
   description:
     "Generic AI implementation fails because it ignores industry context. AIQUIRE brings pre-built playbooks, sector-specific use case libraries, and consultants who understand your regulatory environment.",
+  alternates: { canonical: "/industries" },
+  openGraph: {
+    title: "Industries — AIQUIRE",
+    description:
+      "AI playbooks for 7 industries: Professional Services, Financial Services, Healthcare, E-Commerce, Technology, Real Estate, and Agencies.",
+    url: "/industries",
+  },
 };
 
 export default function IndustriesPage() {
