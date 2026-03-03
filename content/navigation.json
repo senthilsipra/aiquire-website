@@ -3,6 +3,7 @@
     { "label": "Services", "href": "/services" },
     { "label": "Packages", "href": "/packages" },
     { "label": "Industries", "href": "/industries" },
+    { "label": "AI Academy", "href": "/academy" },
     { "label": "Claude Training", "href": "/claude-training" },
     { "label": "About", "href": "/about" },
     { "label": "Contact", "href": "/contact" }
@@ -24,6 +25,7 @@
       { "label": "Services", "href": "/services" },
       { "label": "Packages", "href": "/packages" },
       { "label": "Industries", "href": "/industries" },
+      { "label": "AI Academy", "href": "/academy" },
       { "label": "Claude Training", "href": "/claude-training" },
       { "label": "About", "href": "/about" },
       { "label": "Contact", "href": "/contact" }
