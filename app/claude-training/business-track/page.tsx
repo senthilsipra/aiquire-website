@@ -36,18 +36,18 @@ export default function BusinessTrackPage() {
         <ScrollAnimation>
           <div className="pt-12 md:pt-20 pb-8">
             <Eyebrow>Track 1 &mdash; Claude for Business Teams</Eyebrow>
-            <h1 className="mt-6 font-serif font-bold text-4xl sm:text-5xl md:text-7xl text-[#0F0F0F] tracking-tight">
+            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
               Claude for Business Teams
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#3D3D3D] max-w-2xl">
+            <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
               Knowledge workers who truly understand Claude don&rsquo;t just
               save time &mdash; they produce better work, make better decisions,
               and operate with a confidence that compounds over time. This track
               takes your business teams from occasional Claude users to daily
               power users who treat it as a core professional tool.
             </p>
-            <blockquote className="mt-6 pl-6 border-l-4 border-[#1B4D3E]">
-              <p className="font-serif font-bold text-lg text-[#0F0F0F] leading-snug max-w-2xl">
+            <blockquote className="mt-6 pl-6 border-l-4 border-[#002329]">
+              <p className="font-display font-bold text-lg text-[#0d0d0d] leading-snug max-w-2xl">
                 &ldquo;In 2026, every knowledge worker will feel about Cowork
                 the way engineers feel about Claude Code &mdash; that they just
                 couldn&rsquo;t live without it.&rdquo; &mdash; Anthropic Head of
@@ -57,7 +57,7 @@ export default function BusinessTrackPage() {
             <div className="mt-8">
               <Link
                 href="/contact"
-                className="inline-flex bg-[#0F0F0F] text-white rounded-full px-8 py-3 text-sm font-medium hover:bg-[#1B4D3E] transition-colors"
+                className="inline-flex bg-[var(--color-cta)] text-white rounded px-8 py-3 text-sm font-medium hover:bg-[#002329] transition-colors"
               >
                 Talk to an AI Consultant
               </Link>
@@ -102,47 +102,47 @@ export default function BusinessTrackPage() {
         </ScrollAnimation>
         <ScrollAnimation>
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
-            <div className="bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-6">
-              <p className="text-xs font-medium uppercase tracking-widest text-[#888888] mb-3">
+            <div className="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-6">
+              <p className="text-xs font-medium uppercase tracking-widest text-[#737373] mb-3">
                 What You&rsquo;ll Learn
               </p>
               <ul className="space-y-1.5">
                 {bt02.what_you_learn.map((item, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-2 text-sm text-[#3D3D3D]"
+                    className="flex items-start gap-2 text-sm text-[#404040]"
                   >
-                    <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#1B4D3E]" />
+                    <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#002329]" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-6">
-              <p className="text-xs font-medium uppercase tracking-widest text-[#888888] mb-3">
+            <div className="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-6">
+              <p className="text-xs font-medium uppercase tracking-widest text-[#737373] mb-3">
                 Practical Labs
               </p>
               <ul className="space-y-1.5">
                 {bt02.labs.map((lab, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-2 text-sm text-[#3D3D3D]"
+                    className="flex items-start gap-2 text-sm text-[#404040]"
                   >
-                    <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#1B4D3E]" />
+                    <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#002329]" />
                     {lab}
                   </li>
                 ))}
               </ul>
-              <p className="text-xs font-medium uppercase tracking-widest text-[#888888] mt-6 mb-3">
+              <p className="text-xs font-medium uppercase tracking-widest text-[#737373] mt-6 mb-3">
                 Deliverables
               </p>
               <ul className="space-y-1.5">
                 {bt02.deliverables.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2 text-sm text-[#3D3D3D]"
+                    className="flex items-start gap-2 text-sm text-[#404040]"
                   >
-                    <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#1B4D3E]" />
+                    <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#002329]" />
                     {item}
                   </li>
                 ))}
@@ -204,10 +204,10 @@ export default function BusinessTrackPage() {
       <SectionWrapper>
         <ScrollAnimation>
           <Eyebrow>AI Champions</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             Build the Internal Champions Who Keep Claude Adoption Alive.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#3D3D3D] max-w-3xl">
+          <p className="mt-4 text-base leading-relaxed text-[#404040] max-w-3xl">
             External training delivers the initial capability. Internal AI
             Champions sustain and grow it. The AIQUIRE Claude Champions Program
             develops a cohort of power users who become your organisation&rsquo;s
@@ -215,15 +215,15 @@ export default function BusinessTrackPage() {
           </p>
         </ScrollAnimation>
         <ScrollAnimation>
-          <div className="mt-8 bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-8">
-            <h3 className="font-serif font-bold text-xl text-[#0F0F0F]">
+          <div className="mt-8 bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-8">
+            <h3 className="font-display font-bold text-xl text-[#0d0d0d]">
               Claude Business Champions
             </h3>
-            <p className="mt-2 text-sm text-[#888888]">
+            <p className="mt-2 text-sm text-[#737373]">
               4 weeks post core training &middot; 4&ndash;8 champions per
               organisation
             </p>
-            <p className="mt-3 text-base leading-relaxed text-[#3D3D3D]">
+            <p className="mt-3 text-base leading-relaxed text-[#404040]">
               Business champions are the colleagues others turn to when they get
               stuck with Claude, when they want to know if Cowork can handle a
               new type of task, or when they need help building a better prompt.
@@ -243,9 +243,9 @@ export default function BusinessTrackPage() {
               ].map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-2 text-sm text-[#3D3D3D]"
+                  className="flex items-start gap-2 text-sm text-[#404040]"
                 >
-                  <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#1B4D3E]" />
+                  <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#002329]" />
                   {item}
                 </li>
               ))}
@@ -253,8 +253,8 @@ export default function BusinessTrackPage() {
           </div>
         </ScrollAnimation>
         <ScrollAnimation>
-          <blockquote className="mt-8 pl-6 border-l-4 border-[#1B4D3E]">
-            <p className="font-serif font-bold text-lg text-[#0F0F0F] leading-snug">
+          <blockquote className="mt-8 pl-6 border-l-4 border-[#002329]">
+            <p className="font-display font-bold text-lg text-[#0d0d0d] leading-snug">
               Organisations with internal AI champions show 3x higher long-term
               AI adoption rates than those relying solely on external training.
             </p>

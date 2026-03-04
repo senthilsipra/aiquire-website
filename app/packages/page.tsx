@@ -16,17 +16,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Packages — AIQUIRE",
     description:
-      "Fixed-scope AI consulting packages from $4K to $60K. Strategy, implementation, training, and governance.",
+      "Fixed-scope AI consulting packages. Strategy, implementation, training, and governance.",
     url: "/packages",
   },
 };
-
-function formatPrice(value: number): string {
-  if (value >= 1000) {
-    return `$${Math.round(value / 1000)}K`;
-  }
-  return `$${value}`;
-}
 
 export default function PackagesPage() {
   const entry = packages.filter((p) => p.tier === "entry");
@@ -43,12 +36,12 @@ export default function PackagesPage() {
         <ScrollAnimation>
           <div className="pt-12 md:pt-20 pb-8">
             <Eyebrow>Packages</Eyebrow>
-            <h1 className="mt-6 font-serif font-bold text-4xl sm:text-5xl md:text-7xl text-[#0F0F0F] tracking-tight">
+            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
               Clear Scope. Fixed Price.
               <br />
               Real Outcomes.
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#3D3D3D] max-w-2xl">
+            <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
               Every AIQUIRE package is a fixed-scope engagement with defined
               deliverables. You know what you&rsquo;re getting, what it costs,
               and when it will be done. No retainers that run forever. No scope
@@ -62,7 +55,7 @@ export default function PackagesPage() {
       <SectionWrapper alt>
         <ScrollAnimation>
           <Eyebrow>Entry Packages</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             Start here.
           </h2>
         </ScrollAnimation>
@@ -72,9 +65,6 @@ export default function PackagesPage() {
               <CardPackage
                 name={pkg.name}
                 tier={pkg.tier}
-                priceMin={pkg.price_min}
-                priceMax={pkg.price_max}
-                currency={pkg.currency}
                 duration={pkg.duration}
                 inclusions={pkg.inclusions}
                 cta={pkg.cta}
@@ -89,7 +79,7 @@ export default function PackagesPage() {
       <SectionWrapper>
         <ScrollAnimation>
           <Eyebrow>Implementation Packages</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             Deploy with confidence.
           </h2>
         </ScrollAnimation>
@@ -99,9 +89,6 @@ export default function PackagesPage() {
               <CardPackage
                 name={pkg.name}
                 tier={pkg.tier}
-                priceMin={pkg.price_min}
-                priceMax={pkg.price_max}
-                currency={pkg.currency}
                 duration={pkg.duration}
                 inclusions={pkg.inclusions}
                 cta={pkg.cta}
@@ -116,7 +103,7 @@ export default function PackagesPage() {
       <SectionWrapper alt>
         <ScrollAnimation>
           <Eyebrow>Transformation Packages</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             Transform at scale.
           </h2>
         </ScrollAnimation>
@@ -153,7 +140,7 @@ export default function PackagesPage() {
       <SectionWrapper>
         <ScrollAnimation>
           <Eyebrow>Compare</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             Our Packages at a Glance
           </h2>
         </ScrollAnimation>
@@ -161,23 +148,20 @@ export default function PackagesPage() {
           <div className="mt-12 -mx-6 md:mx-0 overflow-x-auto">
             <table className="w-full text-left min-w-[700px]">
               <thead>
-                <tr className="border-b border-[#EBEBEB]">
-                  <th className="pb-4 pr-4 text-xs font-medium uppercase tracking-widest text-[#888888]">
+                <tr className="border-b border-[#e5e5e5]">
+                  <th className="pb-4 pr-4 text-xs font-medium uppercase tracking-widest text-[#737373]">
                     Package
                   </th>
-                  <th className="pb-4 pr-4 text-xs font-medium uppercase tracking-widest text-[#888888]">
+                  <th className="pb-4 pr-4 text-xs font-medium uppercase tracking-widest text-[#737373]">
                     Tier
                   </th>
-                  <th className="pb-4 pr-4 text-xs font-medium uppercase tracking-widest text-[#888888]">
-                    Investment
-                  </th>
-                  <th className="pb-4 pr-4 text-xs font-medium uppercase tracking-widest text-[#888888]">
+                  <th className="pb-4 pr-4 text-xs font-medium uppercase tracking-widest text-[#737373]">
                     Duration
                   </th>
-                  <th className="pb-4 pr-4 text-xs font-medium uppercase tracking-widest text-[#888888]">
+                  <th className="pb-4 pr-4 text-xs font-medium uppercase tracking-widest text-[#737373]">
                     Key Inclusions
                   </th>
-                  <th className="pb-4 text-xs font-medium uppercase tracking-widest text-[#888888]">
+                  <th className="pb-4 text-xs font-medium uppercase tracking-widest text-[#737373]">
                     &nbsp;
                   </th>
                 </tr>
@@ -186,21 +170,17 @@ export default function PackagesPage() {
                 {packages.map((pkg) => (
                   <tr
                     key={pkg.slug}
-                    className="border-b border-[#EBEBEB] last:border-b-0"
+                    className="border-b border-[#e5e5e5] last:border-b-0"
                   >
                     <td className="py-4 pr-4">
-                      <p className="font-medium text-[#0F0F0F]">{pkg.name}</p>
+                      <p className="font-medium text-[#0d0d0d]">{pkg.name}</p>
                     </td>
                     <td className="py-4 pr-4">
-                      <span className="inline-block bg-[#EBF2EF] text-[#1B4D3E] text-xs font-medium px-2.5 py-0.5 rounded-full capitalize">
+                      <span className="inline-block bg-[#e6faf0] text-[#002329] text-xs font-medium px-2.5 py-0.5 rounded-full capitalize">
                         {pkg.tier}
                       </span>
                     </td>
-                    <td className="py-4 pr-4 text-sm text-[#3D3D3D] whitespace-nowrap">
-                      {formatPrice(pkg.price_min)}&ndash;
-                      {formatPrice(pkg.price_max)}
-                    </td>
-                    <td className="py-4 pr-4 text-sm text-[#3D3D3D] whitespace-nowrap">
+                    <td className="py-4 pr-4 text-sm text-[#404040] whitespace-nowrap">
                       {pkg.duration}
                     </td>
                     <td className="py-4 pr-4">
@@ -208,9 +188,9 @@ export default function PackagesPage() {
                         {pkg.inclusions.slice(0, 3).map((item) => (
                           <li
                             key={item}
-                            className="flex items-start gap-1.5 text-sm text-[#3D3D3D]"
+                            className="flex items-start gap-1.5 text-sm text-[#404040]"
                           >
-                            <span className="mt-1.5 shrink-0 w-1 h-1 rounded-full bg-[#1B4D3E]" />
+                            <span className="mt-1.5 shrink-0 w-1 h-1 rounded-full bg-[#002329]" />
                             {item}
                           </li>
                         ))}
@@ -219,7 +199,7 @@ export default function PackagesPage() {
                     <td className="py-4">
                       <Link
                         href="/contact"
-                        className="text-sm font-medium text-[#1B4D3E] hover:text-[#163D30] transition-colors whitespace-nowrap"
+                        className="text-sm font-medium text-[#002329] hover:text-[#001a1f] transition-colors whitespace-nowrap"
                       >
                         Get started &rarr;
                       </Link>

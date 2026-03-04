@@ -6,9 +6,26 @@ import ScrollAnimation from "@/components/aiquire/ScrollAnimation";
 import Eyebrow from "@/components/aiquire/Eyebrow";
 import CardPackage from "@/components/aiquire/CardPackage";
 import CTASection from "@/components/aiquire/CTASection";
+import IconProfessionalServices from "@/components/aiquire/illustrations/IconProfessionalServices";
+import IconFinancialServices from "@/components/aiquire/illustrations/IconFinancialServices";
+import IconHealthcare from "@/components/aiquire/illustrations/IconHealthcare";
+import IconRetail from "@/components/aiquire/illustrations/IconRetail";
+import IconCustomDev from "@/components/aiquire/illustrations/IconCustomDev";
+import IconManufacturing from "@/components/aiquire/illustrations/IconManufacturing";
+import IconGovernment from "@/components/aiquire/illustrations/IconGovernment";
 import industries from "@/content/industries.json";
 import packages from "@/content/packages.json";
 import services from "@/content/services.json";
+
+const industryIcons: Record<string, React.ReactNode> = {
+  "professional-services": <IconProfessionalServices />,
+  "financial-services": <IconFinancialServices />,
+  "healthcare-medical": <IconHealthcare />,
+  "e-commerce-retail": <IconRetail />,
+  "technology-saas": <IconCustomDev />,
+  "real-estate": <IconManufacturing />,
+  "agencies-marketing": <IconGovernment />,
+};
 
 /* ── Per-industry extras not in industries.json ── */
 
@@ -104,19 +121,22 @@ export default async function IndustryPage({
       <SectionWrapper>
         <ScrollAnimation>
           <div className="pt-12 md:pt-20 pb-8">
+            {industryIcons[industry.slug] && (
+              <div className="mb-6">{industryIcons[industry.slug]}</div>
+            )}
             <Eyebrow>
               Industry {industryNumber} of {industries.length}
             </Eyebrow>
-            <h1 className="mt-6 font-serif font-bold text-4xl sm:text-5xl md:text-7xl text-[#0F0F0F] tracking-tight">
+            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
               {industry.name}
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#3D3D3D] max-w-2xl">
+            <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
               {industry.tagline}
             </p>
             <div className="mt-8">
               <Link
                 href="/contact"
-                className="inline-flex bg-[#0F0F0F] text-white rounded-full px-8 py-3 text-sm font-medium hover:bg-[#1B4D3E] transition-colors"
+                className="inline-flex bg-[var(--color-cta)] text-white rounded px-8 py-3 text-sm font-medium hover:bg-[#002329] transition-colors"
               >
                 Talk to an AI Consultant
               </Link>
@@ -129,18 +149,18 @@ export default async function IndustryPage({
       <SectionWrapper alt>
         <ScrollAnimation>
           <Eyebrow>AI Use Cases</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             Where AI creates value in {industry.name.toLowerCase()}
           </h2>
         </ScrollAnimation>
         <div className="mt-12 grid sm:grid-cols-2 gap-6">
           {industry.use_cases.map((uc, i) => (
             <ScrollAnimation key={uc} delay={i * 0.05}>
-              <div className="bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-6 flex items-start gap-4">
-                <span className="shrink-0 font-serif font-bold text-3xl text-[#EBEBEB] leading-none">
+              <div className="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-6 flex items-start gap-4">
+                <span className="shrink-0 font-display font-bold text-3xl text-[#e5e5e5] leading-none">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="text-base text-[#3D3D3D] pt-1">{uc}</p>
+                <p className="text-base text-[#404040] pt-1">{uc}</p>
               </div>
             </ScrollAnimation>
           ))}
@@ -152,7 +172,7 @@ export default async function IndustryPage({
         <SectionWrapper>
           <ScrollAnimation>
             <Eyebrow>Recommended Starting Point</Eyebrow>
-            <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+            <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
               {industry.starting_package}
             </h2>
           </ScrollAnimation>
@@ -161,9 +181,6 @@ export default async function IndustryPage({
               <CardPackage
                 name={recommendedPkg.name}
                 tier={recommendedPkg.tier}
-                priceMin={recommendedPkg.price_min}
-                priceMax={recommendedPkg.price_max}
-                currency={recommendedPkg.currency}
                 duration={recommendedPkg.duration}
                 inclusions={recommendedPkg.inclusions}
                 cta={recommendedPkg.cta}
@@ -174,7 +191,7 @@ export default async function IndustryPage({
             <div className="mt-8">
               <Link
                 href="/packages"
-                className="text-sm font-medium text-[#1B4D3E] hover:text-[#163D30] transition-colors"
+                className="text-sm font-medium text-[#002329] hover:text-[#001a1f] transition-colors"
               >
                 See all packages &rarr;
               </Link>
@@ -188,14 +205,14 @@ export default async function IndustryPage({
         <SectionWrapper alt>
           <ScrollAnimation>
             <Eyebrow>Key Considerations</Eyebrow>
-            <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+            <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
               Compliance &amp; governance
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-[#3D3D3D] max-w-3xl">
+            <p className="mt-4 text-base leading-relaxed text-[#404040] max-w-3xl">
               {industry.compliance_notes}
             </p>
-            <blockquote className="mt-6 pl-6 border-l-4 border-[#1B4D3E]">
-              <p className="font-serif font-bold text-lg text-[#0F0F0F] leading-snug max-w-2xl">
+            <blockquote className="mt-6 pl-6 border-l-4 border-[#002329]">
+              <p className="font-display font-bold text-lg text-[#0d0d0d] leading-snug max-w-2xl">
                 Every AIQUIRE implementation is reviewed through a security lens
                 by SentienzBay &mdash; data governance, access controls, and
                 compliance requirements included as standard.
@@ -209,7 +226,7 @@ export default async function IndustryPage({
       <SectionWrapper>
         <ScrollAnimation>
           <Eyebrow>Related Services</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             How we help {industry.name.toLowerCase()} organisations
           </h2>
         </ScrollAnimation>
@@ -218,15 +235,15 @@ export default async function IndustryPage({
             <ScrollAnimation key={svc.slug} delay={i * 0.1} className="h-full">
               <Link
                 href={`/services/${svc.slug}`}
-                className="block bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-6 h-full hover:border-[#1B4D3E] transition-colors"
+                className="block bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-6 h-full hover:border-[#002329] transition-colors"
               >
-                <h3 className="font-serif font-bold text-lg text-[#0F0F0F]">
+                <h3 className="font-display font-bold text-lg text-[#0d0d0d]">
                   {svc.name}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#3D3D3D]">
+                <p className="mt-2 text-sm leading-relaxed text-[#404040]">
                   {svc.tagline} {svc.overview}
                 </p>
-                <span className="mt-4 inline-block text-sm font-medium text-[#1B4D3E]">
+                <span className="mt-4 inline-block text-sm font-medium text-[#002329]">
                   Learn more &rarr;
                 </span>
               </Link>

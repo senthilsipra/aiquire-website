@@ -2,9 +2,9 @@ export default function HeroAcademy() {
   // People/team nodes growing in capability — circles with skill rings expanding outward
   const people = [
     { cx: 180, cy: 140, rings: [20, 35, 52], color: "#002329" },
-    { cx: 380, cy: 180, rings: [20, 36, 56], color: "#5cf28e" },
+    { cx: 380, cy: 180, rings: [20, 36, 56], color: "#ce2124" },
     { cx: 580, cy: 120, rings: [20, 38, 60], color: "#002329" },
-    { cx: 780, cy: 170, rings: [20, 35, 54], color: "#5cf28e" },
+    { cx: 780, cy: 170, rings: [20, 35, 54], color: "#ce2124" },
     { cx: 980, cy: 130, rings: [20, 37, 58], color: "#002329" },
   ];
 
@@ -33,7 +33,7 @@ export default function HeroAcademy() {
       <path
         d={`M ${people.map((p) => `${p.cx},${p.cy}`).join(" L ")}`}
         fill="none"
-        stroke="#5cf28e"
+        stroke="#ce2124"
         strokeWidth="1.5"
         strokeDasharray="5 4"
         opacity="0.4"
@@ -59,14 +59,14 @@ export default function HeroAcademy() {
           {/* Core person circle */}
           <circle cx={p.cx} cy={p.cy} r={20} fill={p.color} />
           {/* Head */}
-          <circle cx={p.cx} cy={p.cy - 8} r={6} fill={p.color === "#5cf28e" ? "#002329" : "#5cf28e"} />
+          <circle cx={p.cx} cy={p.cy - 8} r={6} fill={p.color === "#ce2124" ? "#002329" : "#ce2124"} />
           {/* Body line */}
           <line
             x1={p.cx}
             y1={p.cy - 2}
             x2={p.cx}
             y2={p.cy + 10}
-            stroke={p.color === "#5cf28e" ? "#002329" : "#5cf28e"}
+            stroke={p.color === "#ce2124" ? "#002329" : "#ce2124"}
             strokeWidth="3"
             strokeLinecap="round"
           />
@@ -88,7 +88,7 @@ export default function HeroAcademy() {
             width={80}
             height={22}
             rx={11}
-            fill="#e6faf0"
+            fill="#fff8e8"
             stroke="#002329"
             strokeWidth="1"
           />
@@ -109,8 +109,8 @@ export default function HeroAcademy() {
 
       {/* Growth arrow */}
       <g transform="translate(1100, 100)">
-        <line x1="0" y1="60" x2="0" y2="10" stroke="#5cf28e" strokeWidth="2" strokeLinecap="round" />
-        <polygon points="0,6 -5,18 5,18" fill="#5cf28e" />
+        <line x1="0" y1="60" x2="0" y2="10" stroke="#ce2124" strokeWidth="2" strokeLinecap="round" />
+        <polygon points="0,6 -5,18 5,18" fill="#ce2124" />
         <text x="0" y="75" textAnchor="middle" fill="#737373" fontSize="9" fontFamily="Inter, sans-serif">Growth</text>
       </g>
     </svg>

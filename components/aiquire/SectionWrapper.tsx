@@ -18,7 +18,7 @@ export default function SectionWrapper({
       id={id}
       className={cn(
         "py-16 md:py-24",
-        alt ? "bg-[#F2F0EB]" : "bg-[#FAF9F6]",
+        alt ? "bg-white" : "bg-transparent",
         className
       )}
     >

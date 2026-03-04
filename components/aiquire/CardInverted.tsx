@@ -21,13 +21,13 @@ export default function CardInverted({
   className,
 }: CardInvertedProps) {
   return (
-    <div className={cn("bg-[#1B4D3E] text-white rounded-2xl p-8", className)}>
+    <div className={cn("bg-[#002329] text-white rounded-lg p-8", className)}>
       {eyebrow && (
         <span className="inline-block bg-white/15 text-white text-xs font-medium px-3 py-1 rounded-full uppercase tracking-widest mb-4">
           {eyebrow}
         </span>
       )}
-      <h3 className="font-serif font-bold text-2xl md:text-3xl">{title}</h3>
+      <h3 className="font-display font-bold text-2xl md:text-3xl">{title}</h3>
       {description && (
         <p className="mt-3 text-white/80 text-base leading-relaxed">
           {description}
@@ -46,7 +46,7 @@ export default function CardInverted({
       {ctaLabel && ctaHref && (
         <Link
           href={ctaHref}
-          className="mt-6 inline-flex bg-white text-[#1B4D3E] rounded-full px-6 py-2.5 text-sm font-medium hover:bg-white/90 transition-colors"
+          className="mt-6 inline-flex bg-white text-[#002329] rounded-full px-6 py-2.5 text-sm font-medium hover:bg-white/90 transition-colors"
         >
           {ctaLabel}
         </Link>

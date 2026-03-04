@@ -6,7 +6,6 @@ import Eyebrow from "@/components/aiquire/Eyebrow";
 import CardProgramme from "@/components/aiquire/CardProgramme";
 import CardInverted from "@/components/aiquire/CardInverted";
 import CTASection from "@/components/aiquire/CTASection";
-import HeroAcademy from "@/components/aiquire/illustrations/HeroAcademy";
 
 export const metadata: Metadata = {
   title: "AI Academy — AIQUIRE",
@@ -88,22 +87,17 @@ export default function AcademyPage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="inline-flex bg-[#5cf28e] text-[#0d0d0d] rounded-full px-8 py-3 text-sm font-medium hover:bg-[#002329] hover:text-white transition-colors"
+                className="inline-flex bg-[var(--color-cta)] text-white rounded px-8 py-3 text-sm font-medium hover:bg-[#002329] transition-colors"
               >
                 Talk to an AI Consultant
               </Link>
               <Link
                 href="/packages"
-                className="inline-flex border border-[#002329] text-[#0d0d0d] rounded-full px-8 py-3 text-sm font-medium hover:bg-[#002329] hover:text-white transition-colors"
+                className="inline-flex border border-[#002329] text-[#100d0d] rounded px-8 py-3 text-sm font-medium hover:bg-[#002329] hover:text-white transition-colors"
               >
                 See Our Packages
               </Link>
             </div>
-          </div>
-        </ScrollAnimation>
-        <ScrollAnimation delay={0.15}>
-          <div className="rounded-2xl overflow-hidden bg-[#f5f5f5] mt-4">
-            <HeroAcademy />
           </div>
         </ScrollAnimation>
       </SectionWrapper>

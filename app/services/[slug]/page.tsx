@@ -8,8 +8,21 @@ import CardService from "@/components/aiquire/CardService";
 import ProcessStep from "@/components/aiquire/ProcessStep";
 import CardPackage from "@/components/aiquire/CardPackage";
 import CTASection from "@/components/aiquire/CTASection";
+import IconStrategy from "@/components/aiquire/illustrations/IconStrategy";
+import IconProductivity from "@/components/aiquire/illustrations/IconProductivity";
+import IconCustomerRevenue from "@/components/aiquire/illustrations/IconCustomerRevenue";
+import IconOperations from "@/components/aiquire/illustrations/IconOperations";
+import IconCustomDev from "@/components/aiquire/illustrations/IconCustomDev";
 import services from "@/content/services.json";
 import packages from "@/content/packages.json";
+
+const serviceIcons: Record<string, React.ReactNode> = {
+  "ai-strategy": <IconStrategy />,
+  "ai-productivity": <IconProductivity />,
+  "customer-revenue-ai": <IconCustomerRevenue />,
+  "operations-intelligence": <IconOperations />,
+  "custom-ai-development": <IconCustomDev />,
+};
 
 /* ── Per-practice content not in services.json ── */
 
@@ -219,24 +232,27 @@ export default async function ServicePage({
       <SectionWrapper>
         <ScrollAnimation>
           <div className="pt-12 md:pt-20 pb-8">
+            {serviceIcons[practice.slug] && (
+              <div className="mb-6">{serviceIcons[practice.slug]}</div>
+            )}
             <Eyebrow>
               Practice {practiceNumber} of {services.length}
             </Eyebrow>
-            <h1 className="mt-6 font-serif font-bold text-4xl sm:text-5xl md:text-7xl text-[#0F0F0F] tracking-tight">
+            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
               {practice.name}
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#3D3D3D] max-w-2xl">
+            <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
               {practice.tagline} {practice.overview}
             </p>
-            <blockquote className="mt-6 pl-6 border-l-4 border-[#1B4D3E]">
-              <p className="font-serif font-bold text-xl text-[#0F0F0F]">
+            <blockquote className="mt-6 pl-6 border-l-4 border-[#002329]">
+              <p className="font-display font-bold text-xl text-[#0d0d0d]">
                 {extras.blockquote}
               </p>
             </blockquote>
             <div className="mt-8">
               <Link
                 href="/contact"
-                className="inline-flex bg-[#0F0F0F] text-white rounded-full px-8 py-3 text-sm font-medium hover:bg-[#1B4D3E] transition-colors"
+                className="inline-flex bg-[var(--color-cta)] text-white rounded px-8 py-3 text-sm font-medium hover:bg-[#002329] transition-colors"
               >
                 Talk to an AI Consultant
               </Link>
@@ -249,10 +265,10 @@ export default async function ServicePage({
       <SectionWrapper alt>
         <ScrollAnimation>
           <Eyebrow>The Design Thinking Difference</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             How we approach {practice.name.toLowerCase()}
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-[#3D3D3D] max-w-3xl">
+          <p className="mt-6 text-base leading-relaxed text-[#404040] max-w-3xl">
             {practice.design_thinking_note}
           </p>
         </ScrollAnimation>
@@ -262,7 +278,7 @@ export default async function ServicePage({
       <SectionWrapper>
         <ScrollAnimation>
           <Eyebrow>What&rsquo;s Included</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             Services
           </h2>
         </ScrollAnimation>
@@ -287,7 +303,7 @@ export default async function ServicePage({
       <SectionWrapper alt>
         <ScrollAnimation>
           <Eyebrow>How We Deliver</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             Our process
           </h2>
         </ScrollAnimation>
@@ -309,7 +325,7 @@ export default async function ServicePage({
       <SectionWrapper>
         <ScrollAnimation>
           <Eyebrow>Packages</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             Recommended starting points
           </h2>
         </ScrollAnimation>
@@ -319,9 +335,6 @@ export default async function ServicePage({
               <CardPackage
                 name={pkg.name}
                 tier={pkg.tier}
-                priceMin={pkg.price_min}
-                priceMax={pkg.price_max}
-                currency={pkg.currency}
                 duration={pkg.duration}
                 inclusions={pkg.inclusions}
                 cta={pkg.cta}
@@ -334,7 +347,7 @@ export default async function ServicePage({
           <div className="mt-8">
             <Link
               href="/packages"
-              className="text-sm font-medium text-[#1B4D3E] hover:text-[#163D30] transition-colors"
+              className="text-sm font-medium text-[#002329] hover:text-[#001a1f] transition-colors"
             >
               See all packages &rarr;
             </Link>

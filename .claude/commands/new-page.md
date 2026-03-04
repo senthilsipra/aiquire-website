@@ -8,7 +8,7 @@ Given a page name and its content section from CONTENT.md, scaffold the page com
 4. Create the page file at the correct route path per CLAUDE.md build order.
 5. Use only existing global components from /components/aiquire/ and /components/ui/.
 6. Apply AIQUIRE colour tokens — never hardcode colours outside the design system.
-7. Use Playfair Display (font-serif) for h1/h2 headlines, Inter (font-sans) for body.
+7. Use DM Sans (font-display) for h1/h2/h3 headlines, Inter (font-sans) for body.
 8. Wrap sections in SectionWrapper with alternating `alt` prop where appropriate.
 9. Add ScrollAnimation wrappers for fade-up effects on key sections.
 10. All copy must be verbatim from CONTENT.md — never invent or paraphrase.

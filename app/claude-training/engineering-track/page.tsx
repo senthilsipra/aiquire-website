@@ -37,12 +37,12 @@ export default function EngineeringTrackPage() {
         <ScrollAnimation>
           <div className="pt-12 md:pt-20 pb-8">
             <Eyebrow>Track 2 &mdash; Claude Code for Engineering Teams</Eyebrow>
-            <h1 className="mt-6 font-serif font-bold text-4xl sm:text-5xl md:text-7xl text-[#0F0F0F] tracking-tight">
+            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
               Claude Code for Engineering
               <br />
               &amp; Dev Teams
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#3D3D3D] max-w-2xl">
+            <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
               Claude Code is not a better autocomplete. It is an agentic coding
               environment that understands your entire codebase, executes
               multi-step tasks, manages git workflows, and can write
@@ -50,8 +50,8 @@ export default function EngineeringTrackPage() {
               the most value from it have learned to work with it as a
               collaborator &mdash; not a tool. This track teaches exactly that.
             </p>
-            <blockquote className="mt-6 pl-6 border-l-4 border-[#1B4D3E]">
-              <p className="font-serif font-bold text-lg text-[#0F0F0F] leading-snug max-w-2xl">
+            <blockquote className="mt-6 pl-6 border-l-4 border-[#002329]">
+              <p className="font-display font-bold text-lg text-[#0d0d0d] leading-snug max-w-2xl">
                 Spotify reduced engineering time on code migrations by up to 90%
                 with Claude Code. Novo Nordisk cut documentation creation from
                 10+ weeks to 10 minutes. The gap between teams that know Claude
@@ -61,7 +61,7 @@ export default function EngineeringTrackPage() {
             <div className="mt-8">
               <Link
                 href="/contact"
-                className="inline-flex bg-[#0F0F0F] text-white rounded-full px-8 py-3 text-sm font-medium hover:bg-[#1B4D3E] transition-colors"
+                className="inline-flex bg-[var(--color-cta)] text-white rounded px-8 py-3 text-sm font-medium hover:bg-[#002329] transition-colors"
               >
                 Talk to an AI Consultant
               </Link>
@@ -122,47 +122,47 @@ export default function EngineeringTrackPage() {
         </ScrollAnimation>
         <ScrollAnimation>
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
-            <div className="bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-6">
-              <p className="text-xs font-medium uppercase tracking-widest text-[#888888] mb-3">
+            <div className="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-6">
+              <p className="text-xs font-medium uppercase tracking-widest text-[#737373] mb-3">
                 What You&rsquo;ll Learn
               </p>
               <ul className="space-y-1.5">
                 {cc03.what_you_learn.map((item, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-2 text-sm text-[#3D3D3D]"
+                    className="flex items-start gap-2 text-sm text-[#404040]"
                   >
-                    <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#1B4D3E]" />
+                    <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#002329]" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-6">
-              <p className="text-xs font-medium uppercase tracking-widest text-[#888888] mb-3">
+            <div className="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-6">
+              <p className="text-xs font-medium uppercase tracking-widest text-[#737373] mb-3">
                 Labs
               </p>
               <ul className="space-y-1.5">
                 {cc03.labs.map((lab, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-2 text-sm text-[#3D3D3D]"
+                    className="flex items-start gap-2 text-sm text-[#404040]"
                   >
-                    <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#1B4D3E]" />
+                    <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#002329]" />
                     {lab}
                   </li>
                 ))}
               </ul>
-              <p className="text-xs font-medium uppercase tracking-widest text-[#888888] mt-6 mb-3">
+              <p className="text-xs font-medium uppercase tracking-widest text-[#737373] mt-6 mb-3">
                 Deliverables
               </p>
               <ul className="space-y-1.5">
                 {cc03.deliverables.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2 text-sm text-[#3D3D3D]"
+                    className="flex items-start gap-2 text-sm text-[#404040]"
                   >
-                    <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#1B4D3E]" />
+                    <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#002329]" />
                     {item}
                   </li>
                 ))}
@@ -192,7 +192,7 @@ export default function EngineeringTrackPage() {
       <SectionWrapper alt>
         <ScrollAnimation>
           <div className="mb-4">
-            <span className="inline-flex items-center gap-2 bg-[#EBF2EF] text-[#1B4D3E] text-xs font-medium px-3 py-1.5 rounded-full">
+            <span className="inline-flex items-center gap-2 bg-[#e6faf0] text-[#002329] text-xs font-medium px-3 py-1.5 rounded-full">
               Delivered with SentienzBay
             </span>
           </div>
@@ -206,7 +206,7 @@ export default function EngineeringTrackPage() {
             whatYouLearn={cc05.what_you_learn}
             deliverables={cc05.deliverables}
           />
-          <p className="mt-4 text-sm leading-relaxed text-[#3D3D3D] max-w-3xl">
+          <p className="mt-4 text-sm leading-relaxed text-[#404040] max-w-3xl">
             Delivered jointly by AIQUIRE engineering consultants and SentienzBay
             security specialists. This is the workshop that ensures Claude Code
             is deployed with appropriate controls from day one &mdash; not
@@ -235,10 +235,10 @@ export default function EngineeringTrackPage() {
       <SectionWrapper alt>
         <ScrollAnimation>
           <Eyebrow>AI Champions</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             Build the Internal Champions Who Keep Claude Code Adoption Alive.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#3D3D3D] max-w-3xl">
+          <p className="mt-4 text-base leading-relaxed text-[#404040] max-w-3xl">
             External training delivers the initial capability. Internal AI
             Champions sustain and grow it. The AIQUIRE Claude Champions Program
             develops a cohort of power users who become your organisation&rsquo;s
@@ -246,15 +246,15 @@ export default function EngineeringTrackPage() {
           </p>
         </ScrollAnimation>
         <ScrollAnimation>
-          <div className="mt-8 bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-8">
-            <h3 className="font-serif font-bold text-xl text-[#0F0F0F]">
+          <div className="mt-8 bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-8">
+            <h3 className="font-display font-bold text-xl text-[#0d0d0d]">
               Claude Code Champions
             </h3>
-            <p className="mt-2 text-sm text-[#888888]">
+            <p className="mt-2 text-sm text-[#737373]">
               4 weeks post core training &middot; 2&ndash;4 champions per
               engineering team
             </p>
-            <p className="mt-3 text-base leading-relaxed text-[#3D3D3D]">
+            <p className="mt-3 text-base leading-relaxed text-[#404040]">
               Claude Code champions are typically senior engineers or tech leads
               who become the internal authority on Claude Code configuration,
               best practices, and agentic workflow design. They own the
@@ -274,9 +274,9 @@ export default function EngineeringTrackPage() {
               ].map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-2 text-sm text-[#3D3D3D]"
+                  className="flex items-start gap-2 text-sm text-[#404040]"
                 >
-                  <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#1B4D3E]" />
+                  <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#002329]" />
                   {item}
                 </li>
               ))}
@@ -284,8 +284,8 @@ export default function EngineeringTrackPage() {
           </div>
         </ScrollAnimation>
         <ScrollAnimation>
-          <blockquote className="mt-8 pl-6 border-l-4 border-[#1B4D3E]">
-            <p className="font-serif font-bold text-lg text-[#0F0F0F] leading-snug">
+          <blockquote className="mt-8 pl-6 border-l-4 border-[#002329]">
+            <p className="font-display font-bold text-lg text-[#0d0d0d] leading-snug">
               Organisations with internal AI champions show 3x higher long-term
               AI adoption rates than those relying solely on external training.
             </p>

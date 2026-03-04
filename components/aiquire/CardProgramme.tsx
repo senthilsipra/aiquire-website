@@ -32,33 +32,33 @@ export default function CardProgramme({
   return (
     <div
       className={cn(
-        "bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-8",
+        "bg-white rounded-lg border border-[#e6e4e2] shadow-sm p-8",
         className
       )}
     >
       <div className="flex flex-wrap gap-2 mb-4">
-        <span className="inline-block bg-[#EBF2EF] text-[#1B4D3E] text-xs font-medium px-3 py-1 rounded-full uppercase tracking-widest">
+        <span className="inline-block bg-[#fff8e8] text-[#002329] text-xs font-medium px-3 py-1 rounded-full uppercase tracking-widest">
           {code}
         </span>
-        <span className="inline-block bg-[#F2F0EB] text-[#3D3D3D] text-xs font-medium px-3 py-1 rounded-full capitalize">
+        <span className="inline-block bg-[#f0eeec] text-[#514f4f] text-xs font-medium px-3 py-1 rounded-full capitalize">
           {track} Track
         </span>
       </div>
 
-      <h3 className="font-serif font-bold text-xl text-[#0F0F0F]">{name}</h3>
+      <h3 className="font-display font-bold text-xl text-[#100d0d]">{name}</h3>
 
-      <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-sm text-[#888888]">
+      <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-sm text-[#7d7d7d]">
         <span>{format}</span>
         <span>{duration}</span>
       </div>
-      <p className="mt-1 text-sm text-[#3D3D3D]">{audience}</p>
+      <p className="mt-1 text-sm text-[#514f4f]">{audience}</p>
 
       {/* Expandable what you learn */}
       {whatYouLearn.length > 0 && (
         <div className="mt-4">
           <button
             onClick={() => setExpanded(!expanded)}
-            className="flex items-center gap-2 text-sm font-medium text-[#1B4D3E] hover:text-[#163D30] transition-colors"
+            className="flex items-center gap-2 text-sm font-medium text-[#002329] hover:text-[#001a1f] transition-colors"
           >
             What you&apos;ll learn
             <ChevronDown
@@ -72,8 +72,8 @@ export default function CardProgramme({
           {expanded && (
             <ul className="mt-3 space-y-1.5">
               {whatYouLearn.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-[#3D3D3D]">
-                  <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#1B4D3E]" />
+                <li key={i} className="flex items-start gap-2 text-sm text-[#514f4f]">
+                  <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#002329]" />
                   {item}
                 </li>
               ))}
@@ -85,13 +85,13 @@ export default function CardProgramme({
       {/* Deliverables */}
       {deliverables.length > 0 && (
         <div className="mt-4">
-          <p className="text-xs font-medium uppercase tracking-widest text-[#888888] mb-2">
+          <p className="text-xs font-medium uppercase tracking-widest text-[#7d7d7d] mb-2">
             Deliverables
           </p>
           <ul className="space-y-1.5">
             {deliverables.map((item) => (
-              <li key={item} className="flex items-start gap-2 text-sm text-[#3D3D3D]">
-                <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#1B4D3E]" />
+              <li key={item} className="flex items-start gap-2 text-sm text-[#514f4f]">
+                <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#002329]" />
                 {item}
               </li>
             ))}

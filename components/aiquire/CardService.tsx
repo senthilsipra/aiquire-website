@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
 
 interface CardServiceProps {
   code: string;
@@ -7,6 +8,7 @@ interface CardServiceProps {
   deliverables?: string[] | null;
   tools?: string[] | null;
   pricingTier?: string | null;
+  icon?: ReactNode;
   className?: string;
 }
 
@@ -17,32 +19,34 @@ export default function CardService({
   deliverables,
   tools,
   pricingTier,
+  icon,
   className,
 }: CardServiceProps) {
   return (
     <div
       className={cn(
-        "bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-8",
+        "bg-white rounded-lg border border-[#e6e4e2] shadow-sm p-8",
         className
       )}
     >
-      <span className="inline-block bg-[#EBF2EF] text-[#1B4D3E] text-xs font-medium px-3 py-1 rounded-full uppercase tracking-widest">
+      {icon && <div className="mb-4">{icon}</div>}
+      <span className="inline-block bg-[#fff8e8] text-[#002329] text-xs font-medium px-3 py-1 rounded-full uppercase tracking-widest">
         {code}
       </span>
-      <h3 className="mt-4 font-serif font-bold text-xl text-[#0F0F0F]">
+      <h3 className="mt-4 font-display font-bold text-xl text-[#100d0d]">
         {name}
       </h3>
-      <p className="mt-2 text-sm text-[#888888]">{duration}</p>
+      <p className="mt-2 text-sm text-[#7d7d7d]">{duration}</p>
 
       {deliverables && deliverables.length > 0 && (
         <div className="mt-4">
-          <p className="text-xs font-medium uppercase tracking-widest text-[#888888] mb-2">
+          <p className="text-xs font-medium uppercase tracking-widest text-[#7d7d7d] mb-2">
             Deliverables
           </p>
           <ul className="space-y-1.5">
             {deliverables.map((item) => (
-              <li key={item} className="flex items-start gap-2 text-sm text-[#3D3D3D]">
-                <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#1B4D3E]" />
+              <li key={item} className="flex items-start gap-2 text-sm text-[#514f4f]">
+                <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-[#002329]" />
                 {item}
               </li>
             ))}
@@ -52,14 +56,14 @@ export default function CardService({
 
       {tools && tools.length > 0 && (
         <div className="mt-4">
-          <p className="text-xs font-medium uppercase tracking-widest text-[#888888] mb-2">
+          <p className="text-xs font-medium uppercase tracking-widest text-[#7d7d7d] mb-2">
             Tools
           </p>
           <div className="flex flex-wrap gap-2">
             {tools.map((tool) => (
               <span
                 key={tool}
-                className="text-xs bg-[#F2F0EB] text-[#3D3D3D] px-2.5 py-1 rounded-full"
+                className="text-xs bg-[#f0eeec] text-[#514f4f] px-2.5 py-1 rounded-full"
               >
                 {tool}
               </span>
@@ -69,7 +73,7 @@ export default function CardService({
       )}
 
       {pricingTier && (
-        <p className="mt-4 text-sm text-[#888888]">
+        <p className="mt-4 text-sm text-[#7d7d7d]">
           Best for: {pricingTier}
         </p>
       )}

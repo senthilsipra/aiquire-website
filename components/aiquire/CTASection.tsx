@@ -17,19 +17,19 @@ export default function CTASection({
   className,
 }: CTASectionProps) {
   return (
-    <section className={cn("bg-[#F2F0EB] py-16 md:py-24", className)}>
+    <section className={cn("bg-white py-16 md:py-24", className)}>
       <div className="max-w-6xl mx-auto px-6 md:px-10">
-        <h2 className="font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+        <h2 className="font-display font-bold text-3xl md:text-5xl text-[#100d0d]">
           {headline}
         </h2>
         {subtext && (
-          <p className="mt-4 text-base leading-relaxed text-[#3D3D3D] max-w-2xl">
+          <p className="mt-4 text-base leading-relaxed text-[#514f4f] max-w-2xl">
             {subtext}
           </p>
         )}
         <Link
           href={ctaHref}
-          className="mt-8 inline-flex bg-[#0F0F0F] text-white rounded-full px-8 py-3 text-sm font-medium hover:bg-[#1B4D3E] transition-colors"
+          className="mt-8 inline-flex bg-[var(--color-cta)] text-white rounded px-8 py-3 text-sm font-medium hover:bg-[#002329] transition-colors"
         >
           {ctaLabel}
         </Link>

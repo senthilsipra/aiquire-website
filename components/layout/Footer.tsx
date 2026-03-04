@@ -3,7 +3,7 @@ import navigation from "@/content/navigation.json";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F0F0F] text-white">
+    <footer className="bg-[#0d0d0d] text-white">
       <div className="max-w-6xl mx-auto px-6 md:px-10 py-16 md:py-24">
         {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
@@ -95,7 +95,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div>
-            <p className="font-serif font-bold text-lg">
+            <p className="font-display font-bold text-lg">
               Don&apos;t Just Adopt AI. AIQUIRE It.
             </p>
             <p className="text-sm text-white/50 mt-1">

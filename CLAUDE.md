@@ -11,72 +11,45 @@ Stack: Next.js App Router, shadcn/ui, Tailwind CSS, Vercel
 2. /context/CONTENT.md — all page copy (use verbatim, never invent)
 3. /context/PACKAGES.md — package details and pricing
 4. /context/CLAUDE_TRAINING.md — Claude Training practice content
-5. /context/claura-*.png — visual reference screenshots
 
 ## Visual reference
-Style reference site: https://claura.framer.ai/
-Replicate its layout patterns, section structure, typography hierarchy,
-and component feel — with AIQUIRE content and the colour tokens
-from DESIGN_BRIEF.md.
+Style reference: browserbase.com — warm off-white background, PP Neue Montreal font,
+orange-red CTA, subtle grid pattern, nearly rectangular elements, minimal border radius.
 
-Key patterns to replicate from Claura:
-- Light warm off-white page background throughout (no dark sections)
-- Large editorial serif headlines (Playfair Display)
-- Eyebrow pill tags above section headlines
+Key patterns:
+- Warm off-white page background (#f9f6f4) with subtle grid crosshatch
+- Compact geometric sans-serif headlines (Plus Jakarta Sans)
+- Eyebrow dark-chip tags (bg-[#100d0d] text-white rounded) above section headlines
 - Numbered process steps with large faded number behind title
-- Large bold stat callouts (number + short label)
+- Large bold stat callouts on dark teal backgrounds
 - Two-column comparison block (Others vs AIQUIRE)
-- Full-width serif pull quote testimonial
+- Full-width pull quote testimonial
 - Accordion FAQ
-- Dark inverted card for featured/highlighted items
-- Pill-shaped buttons (rounded-full)
+- Dark inverted card (bg-[#002329]) for featured items
+- Orange-red CTA buttons (bg-[#f03603]) with white text
+- Rectangular buttons (rounded, NOT rounded-full)
+- Alt sections use bg-white on the off-white page base
 - Subtle fade-up scroll animations via framer-motion
 
 ## Fonts — load both via next/font/google
-- Playfair Display — headlines only (h1, h2)
-- Inter — everything else
+- Plus Jakarta Sans — headlines, h1, h2, h3, card titles, stats, blockquotes (font-display class)
+- Inter — everything else (body, nav, buttons, labels)
 
-## Colour tokens — set these in globals.css :root
---background:        250 33% 98%      /* #FAF9F6 warm off-white */
---foreground:        0 0% 6%          /* #0F0F0F near-black */
---card:              0 0% 100%        /* #FFFFFF */
---card-foreground:   0 0% 6%
---border:            0 0% 92%         /* #EBEBEB */
---muted:             40 20% 93%       /* #F2F0EB warm grey */
---muted-foreground:  0 0% 53%         /* #888888 */
---primary:           160 47% 19%      /* #1B4D3E deep forest green */
---primary-foreground:0 0% 100%
---accent:            155 30% 93%      /* #EBF2EF soft green tint */
---accent-foreground: 160 47% 19%
---radius:            1rem             /* rounded-2xl base */
-
-## Page build order (strict — one page per session)
-1.  Scaffold + globals.css + layout.tsx
-2.  Homepage — /app/page.tsx
-3.  Contact — /app/contact/page.tsx
-4.  Packages — /app/packages/page.tsx
-5.  Claude Training overview — /app/claude-training/page.tsx
-6.  Claude Training Business Track — /app/claude-training/business-track/page.tsx
-7.  Claude Training Engineering Track — /app/claude-training/engineering-track/page.tsx
-8.  Services AI Strategy — /app/services/ai-strategy/page.tsx
-9.  Services AI Productivity — /app/services/ai-productivity/page.tsx
-10. Services Customer & Revenue AI — /app/services/customer-revenue-ai/page.tsx
-11. Services Operations & Intelligence — /app/services/operations-intelligence/page.tsx
-12. Services Custom AI Development — /app/services/custom-ai-development/page.tsx
-13. About — /app/about/page.tsx
-14. Industries — /app/industries/[vertical]/page.tsx
-
-## Global components — build once in Prompt 3, reuse everywhere
-- components/layout/Header.tsx
-- components/layout/Footer.tsx
-- components/ui/Eyebrow.tsx          pill tag above headlines
-- components/ui/StatBlock.tsx        large number + label
-- components/ui/ProcessStep.tsx      numbered step with faded bg number
-- components/ui/CardInverted.tsx     dark green card for featured items
-- components/ui/ComparisonBlock.tsx  Others vs AIQUIRE two-col checklist
-- components/ui/Testimonial.tsx      full-width serif pull quote
-- components/ui/FAQ.tsx              accordion FAQ
-- components/ui/CTASection.tsx       warm bg CTA with pill button
+## Colour tokens
+--background:        #f9f6f4          warm off-white (Browserbase)
+--foreground:        #100d0d          near-black (headings)
+--card:              #ffffff
+--card-foreground:   #100d0d
+--border:            #e6e4e2          warm border
+--muted:             #f0eeec          warm muted bg
+--muted-foreground:  #7d7d7d
+--primary:           #002329          dark teal (AIQUIRE brand)
+--primary-foreground:#ffffff
+--accent:            #fff8e8          warm cream
+--accent-foreground: #100d0d
+--cta:               #f03603          orange-red (Browserbase)
+--body-text:         #514f4f          warm dark grey
+--radius:            0.375rem         6px — nearly rectangular
 
 ## Content rules
 - All copy from /context/CONTENT.md — verbatim, no paraphrasing
@@ -89,33 +62,32 @@ Key patterns to replicate from Claura:
 - Do not proceed to next page until build is clean
 
 ## Do NOT
-- Use dark hero sections or dark page backgrounds
+- Use warm off-whites (#FAF9F6, #F2F0EB) or old green (#1B4D3E)
 - Use gradients
 - Use blue or purple anywhere
-- Use bright or fluorescent green
 - Use square corners on cards or buttons
-- Use any font other than Playfair Display (headlines) + Inter (body)
+- Use any font other than DM Sans (headlines) + Inter (body)
 - Copy anything from Siprahub's codebase
 - Invent or rewrite copy
 
 ## MCP Servers
 
-**GitHub MCP** — Read open issues, create issues when bugs are found, write PR descriptions automatically. Useful during review cycles.
+**GitHub MCP** — Read open issues, create issues when bugs are found, write PR descriptions automatically.
 
 **Filesystem MCP** — Structured access to content files. Pull copy from markdown files without manual pasting.
 
 **Browsertools MCP** — Screenshot the rendered page in browser, compare to design reference, self-correct layout issues. Install: `npx @agentdeskai/browser-tools-mcp@latest`
 
-**Vercel MCP** — Trigger deployments, check deployment status, read build logs directly. Useful for preview deployment review cycle.
+**Vercel MCP** — Trigger deployments, check deployment status, read build logs directly.
 
 ## Custom Slash Commands
 
 Defined in `.claude/commands/`. Use these for repeated tasks:
 
-- `/new-page` — Given a page name and its content section from CONTENT.md, scaffold the page component, extract copy, build layout using shadcn components, apply AIQUIRE design tokens, and commit to a new branch.
-- `/content-check` — Review the current page against CONTENT.md and flag any copy that was invented, missing, or changed from the source document.
-- `/design-check` — Compare the current page's Tailwind classes against AIQUIRE's component patterns and flag any deviations from the design system.
-- `/seo-pass` — Add metadata exports, Open Graph tags, canonical URLs, and structured data to the current page based on its content.
+- `/new-page` — Scaffold a new page from CONTENT.md content.
+- `/content-check` — Verify copy against source document.
+- `/design-check` — Verify design system compliance.
+- `/seo-pass` — Add metadata to completed page.
 
 ## Agent Strategy
 
@@ -129,14 +101,3 @@ Defined in `.claude/commands/`. Use these for repeated tasks:
 **Parallel sub-agents (use for):**
 - Content extraction while coding runs in parallel
 - Test writing while next page is being built
-
-**MCP tools available:**
-- GitHub: issue tracking, PR descriptions
-- Browsertools: visual regression checks
-- Vercel: deployment triggers and build logs
-
-**Custom commands:**
-- /new-page — scaffold a new page from content
-- /content-check — verify copy against source
-- /design-check — verify design system compliance
-- /seo-pass — add metadata to completed page

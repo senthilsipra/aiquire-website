@@ -5,6 +5,7 @@ import ScrollAnimation from "@/components/aiquire/ScrollAnimation";
 import Eyebrow from "@/components/aiquire/Eyebrow";
 import CardInverted from "@/components/aiquire/CardInverted";
 import CTASection from "@/components/aiquire/CTASection";
+import PatternDark from "@/components/aiquire/illustrations/PatternDark";
 import programmes from "@/content/programmes.json";
 
 export const metadata: Metadata = {
@@ -31,12 +32,12 @@ export default function ClaudeTrainingPage() {
         <ScrollAnimation>
           <div className="pt-12 md:pt-20 pb-8">
             <Eyebrow>Claude Training Practice</Eyebrow>
-            <h1 className="mt-6 font-serif font-bold text-4xl sm:text-5xl md:text-7xl text-[#0F0F0F] tracking-tight">
+            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
               Claude Is Your Most Powerful
               <br />
               Tool. Are You Using It Properly?
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#3D3D3D] max-w-2xl">
+            <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
               Claude is no longer just a chatbot. In 2025 it transformed how
               developers work. In 2026 it&rsquo;s doing the same for every
               knowledge worker in your organisation. AIQUIRE&rsquo;s Claude
@@ -44,15 +45,15 @@ export default function ClaudeTrainingPage() {
               your business teams and engineering teams don&rsquo;t just use
               Claude &mdash; they master it.
             </p>
-            <blockquote className="mt-6 pl-6 border-l-4 border-[#1B4D3E]">
-              <p className="font-serif font-bold text-xl text-[#0F0F0F]">
+            <blockquote className="mt-6 pl-6 border-l-4 border-[#002329]">
+              <p className="font-display font-bold text-xl text-[#0d0d0d]">
                 Most teams are using 20% of what Claude can do. We fix that.
               </p>
             </blockquote>
             <div className="mt-8">
               <Link
                 href="/contact"
-                className="inline-flex bg-[#0F0F0F] text-white rounded-full px-8 py-3 text-sm font-medium hover:bg-[#1B4D3E] transition-colors"
+                className="inline-flex bg-[var(--color-cta)] text-white rounded px-8 py-3 text-sm font-medium hover:bg-[#002329] transition-colors"
               >
                 Talk to an AI Consultant
               </Link>
@@ -65,24 +66,24 @@ export default function ClaudeTrainingPage() {
       <SectionWrapper alt>
         <ScrollAnimation>
           <Eyebrow>Why This Matters Now</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             The gap between using Claude and mastering Claude is costing you.
           </h2>
           <div className="mt-6 max-w-3xl space-y-4">
-            <p className="text-base leading-relaxed text-[#3D3D3D]">
+            <p className="text-base leading-relaxed text-[#404040]">
               Teams that use Claude casually get casual results. Teams that
               understand how Claude thinks, how to prompt effectively, how to
               build workflows around it, and how to govern it safely &mdash;
               those teams operate at a different level entirely.
             </p>
-            <p className="text-base leading-relaxed text-[#3D3D3D]">
+            <p className="text-base leading-relaxed text-[#404040]">
               Anthropic&rsquo;s own enterprise data shows organisations that
               formally train their teams on Claude see dramatically better
               adoption, measurably higher output quality, and faster
               time-to-value from their Claude investment compared to those that
               simply hand out subscriptions and hope for the best.
             </p>
-            <p className="text-base leading-relaxed text-[#3D3D3D]">
+            <p className="text-base leading-relaxed text-[#404040]">
               The same pattern holds for development teams on Claude Code.
               Engineers who understand the tool&rsquo;s agentic architecture,
               know how to configure CLAUDE.md files, set permission boundaries,
@@ -90,8 +91,8 @@ export default function ClaudeTrainingPage() {
               who use it as a simple autocomplete by an order of magnitude.
             </p>
           </div>
-          <blockquote className="mt-8 pl-6 border-l-4 border-[#1B4D3E]">
-            <p className="font-serif font-bold text-lg md:text-xl text-[#0F0F0F] leading-snug max-w-3xl">
+          <blockquote className="mt-8 pl-6 border-l-4 border-[#002329]">
+            <p className="font-display font-bold text-lg md:text-xl text-[#0d0d0d] leading-snug max-w-3xl">
               Claude Cowork launched in January 2026. Claude Code has been
               transforming engineering teams since 2025. The window to establish
               internal capability is now &mdash; before your competitors do.
@@ -104,10 +105,10 @@ export default function ClaudeTrainingPage() {
       <SectionWrapper>
         <ScrollAnimation>
           <Eyebrow>Two Tracks. One Practice.</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             Business Teams. Engineering Teams. Both Covered.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#3D3D3D] max-w-3xl">
+          <p className="mt-4 text-base leading-relaxed text-[#404040] max-w-3xl">
             The AIQUIRE Claude Training Practice operates across two distinct
             tracks &mdash; designed for the realities of each audience, not
             generic AI training dressed up in Claude branding.
@@ -148,12 +149,13 @@ export default function ClaudeTrainingPage() {
       </SectionWrapper>
 
       {/* 4. Stats Strip */}
-      <section className="bg-[#1B4D3E] py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 md:px-10">
+      <section className="relative bg-[#002329] py-16 md:py-24 overflow-hidden">
+        <PatternDark />
+        <div className="relative max-w-6xl mx-auto px-6 md:px-10">
           <ScrollAnimation>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               <div className="text-left">
-                <p className="font-serif font-bold text-5xl md:text-7xl text-white leading-none">
+                <p className="font-display font-bold text-5xl md:text-7xl text-white leading-none">
                   20%
                 </p>
                 <p className="mt-2 text-base text-white/70">
@@ -161,7 +163,7 @@ export default function ClaudeTrainingPage() {
                 </p>
               </div>
               <div className="text-left">
-                <p className="font-serif font-bold text-5xl md:text-7xl text-white leading-none">
+                <p className="font-display font-bold text-5xl md:text-7xl text-white leading-none">
                   11
                 </p>
                 <p className="mt-2 text-base text-white/70">
@@ -169,7 +171,7 @@ export default function ClaudeTrainingPage() {
                 </p>
               </div>
               <div className="text-left">
-                <p className="font-serif font-bold text-5xl md:text-7xl text-white leading-none">
+                <p className="font-display font-bold text-5xl md:text-7xl text-white leading-none">
                   90%
                 </p>
                 <p className="mt-2 text-base text-white/70">
@@ -177,7 +179,7 @@ export default function ClaudeTrainingPage() {
                 </p>
               </div>
               <div className="text-left">
-                <p className="font-serif font-bold text-5xl md:text-7xl text-white leading-none">
+                <p className="font-display font-bold text-5xl md:text-7xl text-white leading-none">
                   3x
                 </p>
                 <p className="mt-2 text-base text-white/70">
@@ -193,18 +195,18 @@ export default function ClaudeTrainingPage() {
       <SectionWrapper alt>
         <ScrollAnimation>
           <Eyebrow>The AIQUIRE Difference</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             We&rsquo;re consultants who use Claude daily. Not instructors who
             read the docs.
           </h2>
         </ScrollAnimation>
         <div className="mt-12 grid md:grid-cols-3 gap-8">
           <ScrollAnimation>
-            <div className="bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-8 h-full">
-              <h3 className="font-serif font-bold text-xl text-[#0F0F0F]">
+            <div className="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-8 h-full">
+              <h3 className="font-display font-bold text-xl text-[#0d0d0d]">
                 Real-World Practitioners
               </h3>
-              <p className="mt-3 text-base leading-relaxed text-[#3D3D3D]">
+              <p className="mt-3 text-base leading-relaxed text-[#404040]">
                 Every trainer in the AIQUIRE Claude Training Practice uses
                 Claude and Claude Code in live client engagements. They know
                 where the pitfalls are, what prompting patterns actually work in
@@ -215,11 +217,11 @@ export default function ClaudeTrainingPage() {
             </div>
           </ScrollAnimation>
           <ScrollAnimation delay={0.1}>
-            <div className="bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-8 h-full">
-              <h3 className="font-serif font-bold text-xl text-[#0F0F0F]">
+            <div className="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-8 h-full">
+              <h3 className="font-display font-bold text-xl text-[#0d0d0d]">
                 Design Thinking Delivery
               </h3>
-              <p className="mt-3 text-base leading-relaxed text-[#3D3D3D]">
+              <p className="mt-3 text-base leading-relaxed text-[#404040]">
                 Training is delivered using Design Thinking principles &mdash;
                 experiential, iterative, and anchored in your actual workflows.
                 Participants don&rsquo;t learn Claude in the abstract. They
@@ -229,11 +231,11 @@ export default function ClaudeTrainingPage() {
             </div>
           </ScrollAnimation>
           <ScrollAnimation delay={0.2}>
-            <div className="bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-8 h-full">
-              <h3 className="font-serif font-bold text-xl text-[#0F0F0F]">
+            <div className="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-8 h-full">
+              <h3 className="font-display font-bold text-xl text-[#0d0d0d]">
                 SentienzBay Security
               </h3>
-              <p className="mt-3 text-base leading-relaxed text-[#3D3D3D]">
+              <p className="mt-3 text-base leading-relaxed text-[#404040]">
                 We also have the security depth of SentienzBay behind us. Every
                 training programme includes governance and security content
                 appropriate for your industry &mdash; not as an afterthought,
@@ -248,7 +250,7 @@ export default function ClaudeTrainingPage() {
       <SectionWrapper>
         <ScrollAnimation>
           <Eyebrow>Programmes</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             Programmes at a Glance
           </h2>
         </ScrollAnimation>
@@ -256,21 +258,21 @@ export default function ClaudeTrainingPage() {
           {/* Business Track */}
           <ScrollAnimation>
             <div>
-              <h3 className="font-serif font-bold text-xl text-[#0F0F0F] mb-6">
+              <h3 className="font-display font-bold text-xl text-[#0d0d0d] mb-6">
                 Business Track
               </h3>
               <div className="space-y-4">
                 {btProgrammes.map((prog) => (
                   <div
                     key={prog.code}
-                    className="flex items-start gap-4 pb-4 border-b border-[#EBEBEB] last:border-b-0"
+                    className="flex items-start gap-4 pb-4 border-b border-[#e5e5e5] last:border-b-0"
                   >
-                    <span className="shrink-0 inline-flex items-center justify-center bg-[#EBF2EF] text-[#1B4D3E] text-xs font-medium px-2.5 py-1 rounded-full">
+                    <span className="shrink-0 inline-flex items-center justify-center bg-[#e6faf0] text-[#002329] text-xs font-medium px-2.5 py-1 rounded-full">
                       {prog.code}
                     </span>
                     <div className="flex-1 min-w-0">
-                      <p className="font-medium text-[#0F0F0F]">{prog.name}</p>
-                      <p className="mt-0.5 text-sm text-[#888888]">
+                      <p className="font-medium text-[#0d0d0d]">{prog.name}</p>
+                      <p className="mt-0.5 text-sm text-[#737373]">
                         {prog.duration} &middot; {prog.audience}
                       </p>
                     </div>
@@ -283,21 +285,21 @@ export default function ClaudeTrainingPage() {
           {/* Engineering Track */}
           <ScrollAnimation delay={0.1}>
             <div>
-              <h3 className="font-serif font-bold text-xl text-[#0F0F0F] mb-6">
+              <h3 className="font-display font-bold text-xl text-[#0d0d0d] mb-6">
                 Engineering Track
               </h3>
               <div className="space-y-4">
                 {ccProgrammes.map((prog) => (
                   <div
                     key={prog.code}
-                    className="flex items-start gap-4 pb-4 border-b border-[#EBEBEB] last:border-b-0"
+                    className="flex items-start gap-4 pb-4 border-b border-[#e5e5e5] last:border-b-0"
                   >
-                    <span className="shrink-0 inline-flex items-center justify-center bg-[#EBF2EF] text-[#1B4D3E] text-xs font-medium px-2.5 py-1 rounded-full">
+                    <span className="shrink-0 inline-flex items-center justify-center bg-[#e6faf0] text-[#002329] text-xs font-medium px-2.5 py-1 rounded-full">
                       {prog.code}
                     </span>
                     <div className="flex-1 min-w-0">
-                      <p className="font-medium text-[#0F0F0F]">{prog.name}</p>
-                      <p className="mt-0.5 text-sm text-[#888888]">
+                      <p className="font-medium text-[#0d0d0d]">{prog.name}</p>
+                      <p className="mt-0.5 text-sm text-[#737373]">
                         {prog.duration} &middot; {prog.audience}
                       </p>
                     </div>
@@ -313,10 +315,10 @@ export default function ClaudeTrainingPage() {
       <SectionWrapper alt>
         <ScrollAnimation>
           <Eyebrow>Recommended Pathways</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             How to Sequence Your Training.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#3D3D3D] max-w-3xl">
+          <p className="mt-4 text-base leading-relaxed text-[#404040] max-w-3xl">
             Every programme can be taken standalone, but structured pathways
             deliver compounding returns. Here are the recommended sequences for
             different audiences and goals.
@@ -325,34 +327,34 @@ export default function ClaudeTrainingPage() {
         <div className="mt-12 grid sm:grid-cols-2 gap-8">
           {/* Pathway 1 */}
           <ScrollAnimation className="h-full">
-            <div className="bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-8 h-full flex flex-col">
-              <span className="text-[#EBEBEB] font-bold text-4xl leading-none">
+            <div className="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-8 h-full flex flex-col">
+              <span className="text-[#e5e5e5] font-bold text-4xl leading-none">
                 01
               </span>
-              <h3 className="mt-3 font-serif font-bold text-xl text-[#0F0F0F]">
+              <h3 className="mt-3 font-display font-bold text-xl text-[#0d0d0d]">
                 Business Team Complete Adoption
               </h3>
-              <p className="mt-1 text-sm text-[#888888]">
+              <p className="mt-1 text-sm text-[#737373]">
                 All knowledge workers &middot; 4&ndash;6 weeks
               </p>
               <ul className="mt-4 space-y-2 flex-1">
-                <li className="text-sm text-[#3D3D3D]">
+                <li className="text-sm text-[#404040]">
                   BT-01: Claude Foundations (all staff &mdash; week 1)
                 </li>
-                <li className="text-sm text-[#3D3D3D]">
+                <li className="text-sm text-[#404040]">
                   BT-04: Function-specific workshops (weeks 2&ndash;3)
                 </li>
-                <li className="text-sm text-[#3D3D3D]">
+                <li className="text-sm text-[#404040]">
                   BT-02: Claude Cowork Deep Dive (week 4)
                 </li>
-                <li className="text-sm text-[#3D3D3D]">
+                <li className="text-sm text-[#404040]">
                   BT-05: Governance &amp; Policy (week 5)
                 </li>
-                <li className="text-sm text-[#3D3D3D]">
+                <li className="text-sm text-[#404040]">
                   BT-03: Advanced Prompt Engineering (week 6)
                 </li>
               </ul>
-              <p className="mt-4 text-sm text-[#1B4D3E] font-medium">
+              <p className="mt-4 text-sm text-[#002329] font-medium">
                 Outcome: Every member of the business team operating with Claude
                 as a daily work tool.
               </p>
@@ -361,37 +363,37 @@ export default function ClaudeTrainingPage() {
 
           {/* Pathway 2 */}
           <ScrollAnimation delay={0.1} className="h-full">
-            <div className="bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-8 h-full flex flex-col">
-              <span className="text-[#EBEBEB] font-bold text-4xl leading-none">
+            <div className="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-8 h-full flex flex-col">
+              <span className="text-[#e5e5e5] font-bold text-4xl leading-none">
                 02
               </span>
-              <h3 className="mt-3 font-serif font-bold text-xl text-[#0F0F0F]">
+              <h3 className="mt-3 font-display font-bold text-xl text-[#0d0d0d]">
                 Engineering Team Full Deployment
               </h3>
-              <p className="mt-1 text-sm text-[#888888]">
+              <p className="mt-1 text-sm text-[#737373]">
                 Development and engineering teams &middot; 4&ndash;5 weeks
               </p>
               <ul className="mt-4 space-y-2 flex-1">
-                <li className="text-sm text-[#3D3D3D]">
+                <li className="text-sm text-[#404040]">
                   CC-01: Setup &amp; Foundations (week 1)
                 </li>
-                <li className="text-sm text-[#3D3D3D]">
+                <li className="text-sm text-[#404040]">
                   CC-02: CLAUDE.md Mastery (week 2)
                 </li>
-                <li className="text-sm text-[#3D3D3D]">
+                <li className="text-sm text-[#404040]">
                   CC-05: Security &amp; Governance (week 2, parallel)
                 </li>
-                <li className="text-sm text-[#3D3D3D]">
+                <li className="text-sm text-[#404040]">
                   CC-03: Agentic Development Workflows (week 3)
                 </li>
-                <li className="text-sm text-[#3D3D3D]">
+                <li className="text-sm text-[#404040]">
                   CC-04: MCP Integration (week 4)
                 </li>
-                <li className="text-sm text-[#3D3D3D]">
+                <li className="text-sm text-[#404040]">
                   CC-06: CI/CD Integration (week 5)
                 </li>
               </ul>
-              <p className="mt-4 text-sm text-[#1B4D3E] font-medium">
+              <p className="mt-4 text-sm text-[#002329] font-medium">
                 Outcome: Engineering team fully onboarded with security-first
                 configuration and CI/CD integration.
               </p>
@@ -400,17 +402,17 @@ export default function ClaudeTrainingPage() {
 
           {/* Pathway 3 */}
           <ScrollAnimation className="h-full">
-            <div className="bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-8 h-full flex flex-col">
-              <span className="text-[#EBEBEB] font-bold text-4xl leading-none">
+            <div className="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-8 h-full flex flex-col">
+              <span className="text-[#e5e5e5] font-bold text-4xl leading-none">
                 03
               </span>
-              <h3 className="mt-3 font-serif font-bold text-xl text-[#0F0F0F]">
+              <h3 className="mt-3 font-display font-bold text-xl text-[#0d0d0d]">
                 Leadership Fast Track
               </h3>
-              <p className="mt-1 text-sm text-[#888888]">
+              <p className="mt-1 text-sm text-[#737373]">
                 C-suite, VPs, and senior leadership &middot; 1 day
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-[#3D3D3D] flex-1">
+              <p className="mt-4 text-sm leading-relaxed text-[#404040] flex-1">
                 A bespoke, condensed session for senior leadership that covers:
                 the strategic implications of Claude and Claude Code, what
                 competitive advantage looks like in an organisation that masters
@@ -419,7 +421,7 @@ export default function ClaudeTrainingPage() {
                 programme. Combines elements of BT-01, BT-05, and CC-05 with
                 executive-level framing.
               </p>
-              <p className="mt-4 text-sm text-[#1B4D3E] font-medium">
+              <p className="mt-4 text-sm text-[#002329] font-medium">
                 Outcome: Leadership aligned on Claude strategy, governance, and
                 sponsorship.
               </p>
@@ -428,11 +430,11 @@ export default function ClaudeTrainingPage() {
 
           {/* Pathway 4 */}
           <ScrollAnimation delay={0.1} className="h-full">
-            <div className="bg-[#1B4D3E] text-white rounded-2xl p-8 h-full flex flex-col">
+            <div className="bg-[#002329] text-white rounded-2xl p-8 h-full flex flex-col">
               <span className="text-white/20 font-bold text-4xl leading-none">
                 04
               </span>
-              <h3 className="mt-3 font-serif font-bold text-xl">
+              <h3 className="mt-3 font-display font-bold text-xl">
                 Full Organisation Rollout
               </h3>
               <p className="mt-1 text-sm text-white/60">

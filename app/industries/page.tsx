@@ -4,7 +4,24 @@ import ScrollAnimation from "@/components/aiquire/ScrollAnimation";
 import Eyebrow from "@/components/aiquire/Eyebrow";
 import IndustryCard from "@/components/aiquire/IndustryCard";
 import CTASection from "@/components/aiquire/CTASection";
+import IconProfessionalServices from "@/components/aiquire/illustrations/IconProfessionalServices";
+import IconFinancialServices from "@/components/aiquire/illustrations/IconFinancialServices";
+import IconHealthcare from "@/components/aiquire/illustrations/IconHealthcare";
+import IconRetail from "@/components/aiquire/illustrations/IconRetail";
+import IconCustomDev from "@/components/aiquire/illustrations/IconCustomDev";
+import IconManufacturing from "@/components/aiquire/illustrations/IconManufacturing";
+import IconGovernment from "@/components/aiquire/illustrations/IconGovernment";
 import industries from "@/content/industries.json";
+
+const industryIcons: Record<string, React.ReactNode> = {
+  "professional-services": <IconProfessionalServices />,
+  "financial-services": <IconFinancialServices />,
+  "healthcare-medical": <IconHealthcare />,
+  "e-commerce-retail": <IconRetail />,
+  "technology-saas": <IconCustomDev />,
+  "real-estate": <IconManufacturing />,
+  "agencies-marketing": <IconGovernment />,
+};
 
 export const metadata: Metadata = {
   title: "Industries — AIQUIRE",
@@ -27,14 +44,14 @@ export default function IndustriesPage() {
         <ScrollAnimation>
           <div className="pt-12 md:pt-20 pb-8">
             <Eyebrow>Industries</Eyebrow>
-            <h1 className="mt-6 font-serif font-bold text-4xl sm:text-5xl md:text-7xl text-[#0F0F0F] tracking-tight">
+            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
               We Know Your Industry.
               <br />
               We Know AI.
               <br />
               The Combination is Powerful.
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#3D3D3D] max-w-2xl">
+            <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
               Generic AI implementation fails because it ignores industry
               context. AIQUIRE brings pre-built playbooks, sector-specific use
               case libraries, and consultants who understand your regulatory
@@ -49,7 +66,7 @@ export default function IndustriesPage() {
       <SectionWrapper alt>
         <ScrollAnimation>
           <Eyebrow>Sector Playbooks</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#0d0d0d]">
             We speak your industry&rsquo;s language.
           </h2>
         </ScrollAnimation>
@@ -62,6 +79,7 @@ export default function IndustriesPage() {
                 tagline={ind.tagline}
                 useCases={ind.use_cases}
                 startingPackage={ind.starting_package}
+                icon={industryIcons[ind.slug]}
                 className="h-full"
               />
             </ScrollAnimation>

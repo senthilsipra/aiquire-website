@@ -4,7 +4,20 @@ import SectionWrapper from "@/components/aiquire/SectionWrapper";
 import ScrollAnimation from "@/components/aiquire/ScrollAnimation";
 import Eyebrow from "@/components/aiquire/Eyebrow";
 import CTASection from "@/components/aiquire/CTASection";
+import IconStrategy from "@/components/aiquire/illustrations/IconStrategy";
+import IconProductivity from "@/components/aiquire/illustrations/IconProductivity";
+import IconCustomerRevenue from "@/components/aiquire/illustrations/IconCustomerRevenue";
+import IconOperations from "@/components/aiquire/illustrations/IconOperations";
+import IconCustomDev from "@/components/aiquire/illustrations/IconCustomDev";
 import services from "@/content/services.json";
+
+const serviceIcons: Record<string, React.ReactNode> = {
+  "ai-strategy": <IconStrategy />,
+  "ai-productivity": <IconProductivity />,
+  "customer-revenue-ai": <IconCustomerRevenue />,
+  "operations-intelligence": <IconOperations />,
+  "custom-ai-development": <IconCustomDev />,
+};
 
 export const metadata: Metadata = {
   title: "Services — AIQUIRE",
@@ -27,12 +40,12 @@ export default function ServicesPage() {
         <ScrollAnimation>
           <div className="pt-12 md:pt-20 pb-8">
             <Eyebrow>Services</Eyebrow>
-            <h1 className="mt-6 font-serif font-bold text-4xl sm:text-5xl md:text-7xl text-[#0F0F0F] tracking-tight">
+            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
               Five Practices.
               <br />
               One AI Journey.
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#3D3D3D] max-w-2xl">
+            <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
               AIQUIRE&rsquo;s five service practices cover the full AI adoption
               journey &mdash; from initial strategy through to custom AI
               development. Each practice is anchored in Design Thinking and
@@ -53,18 +66,21 @@ export default function ServicesPage() {
             >
               <Link
                 href={`/services/${practice.slug}`}
-                className="block bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-8 h-full hover:border-[#1B4D3E] transition-colors"
+                className="block bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-8 h-full hover:border-[#002329] transition-colors"
               >
-                <span className="text-[#EBEBEB] font-bold text-4xl leading-none">
+                {serviceIcons[practice.slug] && (
+                  <div className="mb-4">{serviceIcons[practice.slug]}</div>
+                )}
+                <span className="text-[#e5e5e5] font-bold text-4xl leading-none">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h2 className="mt-3 font-serif font-bold text-xl text-[#0F0F0F]">
+                <h2 className="mt-3 font-display font-bold text-xl text-[#0d0d0d]">
                   {practice.name}
                 </h2>
-                <p className="mt-2 text-sm leading-relaxed text-[#3D3D3D]">
+                <p className="mt-2 text-sm leading-relaxed text-[#404040]">
                   {practice.tagline} {practice.overview}
                 </p>
-                <span className="mt-4 inline-block text-sm font-medium text-[#1B4D3E]">
+                <span className="mt-4 inline-block text-sm font-medium text-[#002329]">
                   Learn more &rarr;
                 </span>
               </Link>

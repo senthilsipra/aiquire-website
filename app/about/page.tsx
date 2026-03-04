@@ -5,6 +5,12 @@ import ScrollAnimation from "@/components/aiquire/ScrollAnimation";
 import Eyebrow from "@/components/aiquire/Eyebrow";
 import ProcessStep from "@/components/aiquire/ProcessStep";
 import CTASection from "@/components/aiquire/CTASection";
+import StepEmpathise from "@/components/aiquire/illustrations/StepEmpathise";
+import StepDefine from "@/components/aiquire/illustrations/StepDefine";
+import StepIdeate from "@/components/aiquire/illustrations/StepIdeate";
+import StepPrototype from "@/components/aiquire/illustrations/StepPrototype";
+import StepTest from "@/components/aiquire/illustrations/StepTest";
+import PatternDark from "@/components/aiquire/illustrations/PatternDark";
 
 export const metadata: Metadata = {
   title: "About — AIQUIRE",
@@ -27,12 +33,12 @@ export default function AboutPage() {
         <ScrollAnimation>
           <div className="pt-12 md:pt-20 pb-8">
             <Eyebrow>About AIQUIRE</Eyebrow>
-            <h1 className="mt-6 font-serif font-bold text-4xl sm:text-5xl md:text-7xl text-[#0F0F0F] tracking-tight">
+            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#100d0d] tracking-tight">
               The Bridge Between
               <br />
               Business and AI.
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#3D3D3D] max-w-2xl">
+            <p className="mt-6 text-lg leading-relaxed text-[#514f4f] max-w-2xl">
               AIQUIRE was built because the market had a problem: AI expertise
               without business consulting depth, or business consulting without
               AI implementation capability. Rarely both. We exist to be both
@@ -46,23 +52,23 @@ export default function AboutPage() {
       <SectionWrapper alt>
         <ScrollAnimation>
           <Eyebrow>Why AIQUIRE Exists</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#100d0d]">
             The gap we were built to close.
           </h2>
           <div className="mt-6 max-w-3xl space-y-4">
-            <p className="text-base leading-relaxed text-[#3D3D3D]">
+            <p className="text-base leading-relaxed text-[#514f4f]">
               Every week, another business announces it&rsquo;s
               &lsquo;implementing AI.&rsquo; Most of these initiatives share a
               common failure mode: they start with the technology rather than the
               business problem. Tools get deployed, adoption is poor, ROI never
               materialises, and the organisation concludes that AI is overhyped.
             </p>
-            <blockquote className="pl-6 border-l-4 border-[#1B4D3E]">
-              <p className="font-serif font-bold text-xl text-[#0F0F0F]">
+            <blockquote className="pl-6 border-l-4 border-[#002329]">
+              <p className="font-display font-bold text-xl text-[#100d0d]">
                 It is not overhyped. It is underimplemented.
               </p>
             </blockquote>
-            <p className="text-base leading-relaxed text-[#3D3D3D]">
+            <p className="text-base leading-relaxed text-[#514f4f]">
               AIQUIRE was founded by consultants who spent years watching this
               pattern repeat &mdash; in management consulting, in technology
               consulting, across industries and geographies. We knew there was a
@@ -77,10 +83,10 @@ export default function AboutPage() {
       <SectionWrapper>
         <ScrollAnimation>
           <Eyebrow>Our Methodology</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#100d0d]">
             Design Thinking Meets AI
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#3D3D3D] max-w-3xl">
+          <p className="mt-4 text-base leading-relaxed text-[#514f4f] max-w-3xl">
             Design Thinking is the discipline of solving the right problem
             before you solve any problem. It is human-centred, iterative, and
             empirical. In the context of AI adoption, it means:
@@ -92,6 +98,7 @@ export default function AboutPage() {
               number="01"
               title="Empathise"
               description="Starting with your business challenge, not with AI capabilities."
+              illustration={<StepEmpathise />}
             />
           </ScrollAnimation>
           <ScrollAnimation delay={0.1}>
@@ -99,6 +106,7 @@ export default function AboutPage() {
               number="02"
               title="Define"
               description="The discipline of solving the right problem before you solve any problem."
+              illustration={<StepDefine />}
               reverse
             />
           </ScrollAnimation>
@@ -107,6 +115,7 @@ export default function AboutPage() {
               number="03"
               title="Ideate"
               description="Engaging your team in facilitated discovery — workshops, ideastorms, and brainstorms — to surface real opportunities."
+              illustration={<StepIdeate />}
             />
           </ScrollAnimation>
           <ScrollAnimation delay={0.2}>
@@ -114,6 +123,7 @@ export default function AboutPage() {
               number="04"
               title="Prototype"
               description="Prototyping and testing assumptions before committing to full implementation."
+              illustration={<StepPrototype />}
               reverse
             />
           </ScrollAnimation>
@@ -122,11 +132,12 @@ export default function AboutPage() {
               number="05"
               title="Test"
               description="Measuring success by business outcomes, not by tools deployed."
+              illustration={<StepTest />}
             />
           </ScrollAnimation>
         </div>
         <ScrollAnimation>
-          <p className="mt-12 text-base leading-relaxed text-[#3D3D3D] max-w-3xl">
+          <p className="mt-12 text-base leading-relaxed text-[#514f4f] max-w-3xl">
             Every AIQUIRE engagement &mdash; from a one-week AI Starter Sprint
             to a twelve-week AI Transformation &mdash; is anchored in this
             methodology. It is not a phase. It is how we work.
@@ -135,12 +146,13 @@ export default function AboutPage() {
       </SectionWrapper>
 
       {/* 4. Stats Strip */}
-      <section className="bg-[#1B4D3E] py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 md:px-10">
+      <section className="relative bg-[#002329] py-16 md:py-24 overflow-hidden">
+        <PatternDark />
+        <div className="relative max-w-6xl mx-auto px-6 md:px-10">
           <ScrollAnimation>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               <div className="text-left">
-                <p className="font-serif font-bold text-5xl md:text-7xl text-white leading-none">
+                <p className="font-display font-bold text-5xl md:text-7xl text-white leading-none">
                   5
                 </p>
                 <p className="mt-2 text-base text-white/70">
@@ -148,7 +160,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="text-left">
-                <p className="font-serif font-bold text-5xl md:text-7xl text-white leading-none">
+                <p className="font-display font-bold text-5xl md:text-7xl text-white leading-none">
                   7
                 </p>
                 <p className="mt-2 text-base text-white/70">
@@ -156,7 +168,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="text-left">
-                <p className="font-serif font-bold text-5xl md:text-7xl text-white leading-none">
+                <p className="font-display font-bold text-5xl md:text-7xl text-white leading-none">
                   8
                 </p>
                 <p className="mt-2 text-base text-white/70">
@@ -164,7 +176,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="text-left">
-                <p className="font-serif font-bold text-5xl md:text-7xl text-white leading-none">
+                <p className="font-display font-bold text-5xl md:text-7xl text-white leading-none">
                   1&ndash;12wk
                 </p>
                 <p className="mt-2 text-base text-white/70">
@@ -180,17 +192,17 @@ export default function AboutPage() {
       <SectionWrapper alt>
         <ScrollAnimation>
           <Eyebrow>Our Team</Eyebrow>
-          <h2 className="mt-6 font-serif font-bold text-3xl md:text-5xl text-[#0F0F0F]">
+          <h2 className="mt-6 font-display font-bold text-3xl md:text-5xl text-[#100d0d]">
             Our Consultants
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#3D3D3D] max-w-3xl">
+          <p className="mt-4 text-base leading-relaxed text-[#514f4f] max-w-3xl">
             AIQUIRE consultants bring experience from top-tier management
             consulting and technology consulting firms. They have led AI
             transformations at scale, managed enterprise procurement, navigated
             complex stakeholder landscapes, and built the change management
             programmes that make new technology actually stick.
           </p>
-          <p className="mt-4 text-base leading-relaxed text-[#3D3D3D] max-w-3xl">
+          <p className="mt-4 text-base leading-relaxed text-[#514f4f] max-w-3xl">
             They are not AI evangelists. They are business problem-solvers who
             know how to use AI to solve them.
           </p>
@@ -204,16 +216,16 @@ export default function AboutPage() {
             { name: "Consultant 4", role: "Security & Governance" },
           ].map((member) => (
             <ScrollAnimation key={member.name}>
-              <div className="bg-white rounded-2xl border border-[#EBEBEB] shadow-sm p-6 text-center">
-                <div className="w-20 h-20 mx-auto rounded-full bg-[#EBF2EF] flex items-center justify-center">
-                  <span className="text-2xl font-serif font-bold text-[#1B4D3E]">
+              <div className="bg-white rounded-lg border border-[#e6e4e2] shadow-sm p-6 text-center">
+                <div className="w-20 h-20 mx-auto rounded-full bg-[#fff8e8] flex items-center justify-center">
+                  <span className="text-2xl font-display font-bold text-[#002329]">
                     {member.name.slice(-1)}
                   </span>
                 </div>
-                <h3 className="mt-4 font-serif font-bold text-lg text-[#0F0F0F]">
+                <h3 className="mt-4 font-display font-bold text-lg text-[#100d0d]">
                   {member.name}
                 </h3>
-                <p className="mt-1 text-sm text-[#888888]">{member.role}</p>
+                <p className="mt-1 text-sm text-[#7d7d7d]">{member.role}</p>
               </div>
             </ScrollAnimation>
           ))}
@@ -225,10 +237,10 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-12">
           <ScrollAnimation>
             <Eyebrow>Security Built In</Eyebrow>
-            <h2 className="mt-6 font-serif font-bold text-3xl md:text-4xl text-[#0F0F0F]">
+            <h2 className="mt-6 font-display font-bold text-3xl md:text-4xl text-[#100d0d]">
               SentienzBay
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-[#3D3D3D]">
+            <p className="mt-4 text-base leading-relaxed text-[#514f4f]">
               As the AI adoption practice of Siprahub, AIQUIRE has direct access
               to SentienzBay&rsquo;s cybersecurity expertise. Every
               implementation we deliver is reviewed through a security lens
@@ -239,10 +251,10 @@ export default function AboutPage() {
           </ScrollAnimation>
           <ScrollAnimation delay={0.1}>
             <Eyebrow>Part of Siprahub</Eyebrow>
-            <h2 className="mt-6 font-serif font-bold text-3xl md:text-4xl text-[#0F0F0F]">
+            <h2 className="mt-6 font-display font-bold text-3xl md:text-4xl text-[#100d0d]">
               Siprahub
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-[#3D3D3D]">
+            <p className="mt-4 text-base leading-relaxed text-[#514f4f]">
               AIQUIRE is the AI adoption division of Siprahub &mdash; a
               technology services group bringing together AI adoption,
               cybersecurity, and business consulting under one roof. Our clients
@@ -252,7 +264,7 @@ export default function AboutPage() {
             <p className="mt-4">
               <Link
                 href="https://siprahub.com"
-                className="text-sm font-medium text-[#1B4D3E] hover:text-[#163D30] transition-colors"
+                className="text-sm font-medium text-[#002329] hover:text-[#001a1f] transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >

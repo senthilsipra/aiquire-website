@@ -9,10 +9,10 @@ interface StatBlockProps {
 export default function StatBlock({ value, label, className }: StatBlockProps) {
   return (
     <div className={cn("text-left", className)}>
-      <p className="font-serif font-bold text-5xl md:text-7xl text-[#0F0F0F] leading-none">
+      <p className="font-display font-bold text-5xl md:text-7xl text-[#100d0d] leading-none">
         {value}
       </p>
-      <p className="mt-2 text-base text-[#3D3D3D]">{label}</p>
+      <p className="mt-2 text-base text-[#514f4f]">{label}</p>
     </div>
   );
 }
