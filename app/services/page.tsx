@@ -10,6 +10,7 @@ import IconCustomerRevenue from "@/components/aiquire/illustrations/IconCustomer
 import IconOperations from "@/components/aiquire/illustrations/IconOperations";
 import IconCustomDev from "@/components/aiquire/illustrations/IconCustomDev";
 import services from "@/content/services.json";
+import { InteractiveImageAccordion } from "@/components/ui/interactive-image-accordion";
 
 const serviceIcons: Record<string, React.ReactNode> = {
   "ai-strategy": <IconStrategy />,
@@ -36,24 +37,36 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <SectionWrapper>
-        <ScrollAnimation>
-          <div className="pt-12 md:pt-20 pb-8">
-            <Eyebrow>Services</Eyebrow>
-            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
-              Five Practices.
-              <br />
-              One AI Journey.
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
-              AIQUIRE&rsquo;s five service practices cover the full AI adoption
-              journey &mdash; from initial strategy through to custom AI
-              development. Each practice is anchored in Design Thinking and
-              delivered with SentienzBay security review as standard.
-            </p>
+      <section className="bg-transparent overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left Side: Text Content */}
+            <ScrollAnimation>
+              <div>
+                <Eyebrow>Services</Eyebrow>
+                <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
+                  Five Practices.
+                  <br />
+                  One AI Journey.
+                </h1>
+                <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
+                  AIQUIRE&rsquo;s five service practices cover the full AI adoption
+                  journey &mdash; from initial strategy through to custom AI
+                  development. Each practice is anchored in Design Thinking and
+                  delivered with SentienzBay security review as standard.
+                </p>
+              </div>
+            </ScrollAnimation>
+
+            {/* Right Side: Illustration / Image Accordion */}
+            <ScrollAnimation delay={0.1}>
+              <div className="relative flex justify-center lg:justify-end h-full min-h-[400px]">
+                <InteractiveImageAccordion />
+              </div>
+            </ScrollAnimation>
           </div>
-        </ScrollAnimation>
-      </SectionWrapper>
+        </div>
+      </section>
 
       {/* Practice Cards */}
       <SectionWrapper alt>
@@ -71,9 +84,6 @@ export default function ServicesPage() {
                 {serviceIcons[practice.slug] && (
                   <div className="mb-4">{serviceIcons[practice.slug]}</div>
                 )}
-                <span className="text-[#e5e5e5] font-bold text-4xl leading-none">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
                 <h2 className="mt-3 font-display font-bold text-xl text-[#0d0d0d]">
                   {practice.name}
                 </h2>
@@ -99,3 +109,4 @@ export default function ServicesPage() {
     </>
   );
 }
+

@@ -11,14 +11,44 @@ import StepIdeate from "@/components/aiquire/illustrations/StepIdeate";
 import StepPrototype from "@/components/aiquire/illustrations/StepPrototype";
 import StepTest from "@/components/aiquire/illustrations/StepTest";
 import PatternDark from "@/components/aiquire/illustrations/PatternDark";
+import { InteractiveImageAccordion } from "@/components/ui/interactive-image-accordion";
+
+const accordionItems = [
+
+  {
+    id: 1,
+    title: "About AIQUIRE",
+    imageUrl: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 2,
+    title: "AI Innovation",
+    imageUrl: "https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 3,
+    title: "Industries",
+    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 4,
+    title: "AI Academy",
+    imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 5,
+    title: "Claude Training",
+    imageUrl: "https://images.unsplash.com/photo-1677442135136-760c813028c0?q=80&w=2070&auto=format&fit=crop"
+  }
+];
 
 export const metadata: Metadata = {
-  title: "About — AIQUIRE",
+  title: "About-AIQUIRE",
   description:
     "AIQUIRE was built because the market had a problem: AI expertise without business consulting depth, or business consulting without AI implementation capability. Rarely both. We exist to be both.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About — AIQUIRE",
+    title: "About-AIQUIRE",
     description:
       "The bridge between business and AI. Design Thinking methodology meets hands-on AI expertise.",
     url: "/about",
@@ -29,24 +59,36 @@ export default function AboutPage() {
   return (
     <>
       {/* 1. Hero */}
-      <SectionWrapper>
-        <ScrollAnimation>
-          <div className="pt-12 md:pt-20 pb-8">
-            <Eyebrow>About AIQUIRE</Eyebrow>
-            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#100d0d] tracking-tight">
-              The Bridge Between
-              <br />
-              Business and AI.
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#514f4f] max-w-2xl">
-              AIQUIRE was built because the market had a problem: AI expertise
-              without business consulting depth, or business consulting without
-              AI implementation capability. Rarely both. We exist to be both
-              &mdash; and to be the partner that closes the gap.
-            </p>
+      <section className="bg-transparent overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left Side: Text Content */}
+            <ScrollAnimation>
+              <div>
+                <Eyebrow>About AIQUIRE</Eyebrow>
+                <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#100d0d] tracking-tight">
+                  The Bridge Between
+                  <br />
+                  Business and AI.
+                </h1>
+                <p className="mt-6 text-lg leading-relaxed text-[#514f4f] max-w-2xl">
+                  AIQUIRE was built because the market had a problem: AI expertise
+                  without business consulting depth, or business consulting without
+                  AI implementation capability. Rarely both. We exist to be both
+                  &mdash; and to be the partner that closes the gap.
+                </p>
+              </div>
+            </ScrollAnimation>
+
+            {/* Right Side: Illustration / Image Accordion */}
+            <ScrollAnimation delay={0.1}>
+              <div className="relative flex justify-center lg:justify-end h-full min-h-[400px]">
+                <InteractiveImageAccordion items={accordionItems} />
+              </div>
+            </ScrollAnimation>
           </div>
-        </ScrollAnimation>
-      </SectionWrapper>
+        </div>
+      </section>
 
       {/* 2. Founding Narrative */}
       <SectionWrapper alt>
@@ -114,7 +156,7 @@ export default function AboutPage() {
             <ProcessStep
               number="03"
               title="Ideate"
-              description="Engaging your team in facilitated discovery — workshops, ideastorms, and brainstorms — to surface real opportunities."
+              description="Engaging your team in facilitated discovery â€” workshops, ideastorms, and brainstorms â€” to surface real opportunities."
               illustration={<StepIdeate />}
             />
           </ScrollAnimation>
@@ -146,7 +188,7 @@ export default function AboutPage() {
       </SectionWrapper>
 
       {/* 4. Stats Strip */}
-      <section className="relative bg-[#002329] py-16 md:py-24 overflow-hidden">
+      <section className="relative bg-[#ce2124] py-16 md:py-24 overflow-hidden">
         <PatternDark />
         <div className="relative max-w-6xl mx-auto px-6 md:px-10">
           <ScrollAnimation>
@@ -177,10 +219,10 @@ export default function AboutPage() {
               </div>
               <div className="text-left">
                 <p className="font-display font-bold text-5xl md:text-7xl text-white leading-none">
-                  1&ndash;12wk
+                  <span className="whitespace-nowrap">2&ndash;6wk</span>
                 </p>
                 <p className="mt-2 text-base text-white/70">
-                  engagement timelines
+                  typical implementation timeline
                 </p>
               </div>
             </div>
@@ -218,7 +260,7 @@ export default function AboutPage() {
             <ScrollAnimation key={member.name}>
               <div className="bg-white rounded-lg border border-[#e6e4e2] shadow-sm p-6 text-center">
                 <div className="w-20 h-20 mx-auto rounded-full bg-[#fff8e8] flex items-center justify-center">
-                  <span className="text-2xl font-display font-bold text-[#002329]">
+                  <span className="text-2xl font-display font-bold text-[#ce2124]">
                     {member.name.slice(-1)}
                   </span>
                 </div>
@@ -285,3 +327,6 @@ export default function AboutPage() {
     </>
   );
 }
+
+
+

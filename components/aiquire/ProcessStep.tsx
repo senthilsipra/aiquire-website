@@ -48,11 +48,11 @@ export default function ProcessStep({
 
       {/* Optional illustration or image */}
       {illustration ? (
-        <div className="rounded-lg overflow-hidden bg-[#f0eeec] p-8">
+        <div className="rounded-lg overflow-hidden bg-white border border-[#e6e4e2] p-8">
           {illustration}
         </div>
       ) : image ? (
-        <div className="rounded-lg overflow-hidden bg-[#f0eeec]">
+        <div className="rounded-lg overflow-hidden bg-white border border-[#e6e4e2]">
           <Image
             src={image}
             alt={imageAlt || title}
@@ -65,3 +65,4 @@ export default function ProcessStep({
     </div>
   );
 }
+

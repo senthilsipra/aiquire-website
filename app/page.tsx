@@ -19,7 +19,6 @@ import IconFinancialServices from "@/components/aiquire/illustrations/IconFinanc
 import IconHealthcare from "@/components/aiquire/illustrations/IconHealthcare";
 import IconRetail from "@/components/aiquire/illustrations/IconRetail";
 import IconManufacturing from "@/components/aiquire/illustrations/IconManufacturing";
-import IconEducation from "@/components/aiquire/illustrations/IconEducation";
 import IconGovernment from "@/components/aiquire/illustrations/IconGovernment";
 import IconCustomDev from "@/components/aiquire/illustrations/IconCustomDev";
 import industries from "@/content/industries.json";
@@ -160,7 +159,7 @@ export default function Home() {
       </SectionWrapper>
 
       {/* 4. Stats Strip */}
-      <section className="relative bg-[#002329] py-16 md:py-24 overflow-hidden">
+      <section className="relative bg-[#ce2124] py-16 md:py-24 overflow-hidden">
         <PatternDark />
         <div className="relative max-w-6xl mx-auto px-6 md:px-10">
           <ScrollAnimation>
@@ -190,7 +189,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="text-left">
-                <p className="font-display font-bold text-5xl md:text-7xl text-white leading-none">
+                <p className="font-display font-bold text-5xl md:text-7xl text-white leading-none whitespace-nowrap">
                   2&ndash;6wk
                 </p>
                 <p className="mt-2 text-base text-white/70">
@@ -247,7 +246,7 @@ export default function Home() {
           ].map((item, i) => (
             <ScrollAnimation key={item.name} delay={i * 0.1}>
               <div className="bg-white rounded-lg border border-[#e6e4e2] shadow-sm p-6 h-full">
-                <span className="text-[#e6e4e2] font-bold text-4xl leading-none">
+                <span className="text-[#ce2124] font-bold text-4xl leading-none">
                   {item.step}
                 </span>
                 <h3 className="mt-3 font-display font-bold text-lg text-[#100d0d]">
@@ -313,7 +312,6 @@ export default function Home() {
               duration={quickWin.duration}
               inclusions={quickWin.inclusions}
               cta={quickWin.cta}
-              featured
               className="h-full"
             />
           </ScrollAnimation>
@@ -392,3 +390,8 @@ export default function Home() {
     </>
   );
 }
+
+
+
+
+

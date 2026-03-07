@@ -2,7 +2,7 @@ export default function IconStrategy() {
   return (
     <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       {/* Compass */}
-      <circle cx="24" cy="24" r="20" fill="#fff8e8" stroke="#002329" strokeWidth="1.5" />
+      <circle cx="24" cy="24" r="20" fill="#ffffff" stroke="#002329" strokeWidth="1.5" />
       <circle cx="24" cy="24" r="3" fill="#002329" />
       {/* North needle */}
       <polygon points="24,6 21,24 27,24" fill="#ce2124" />

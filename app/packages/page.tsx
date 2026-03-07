@@ -7,6 +7,35 @@ import CardPackage from "@/components/aiquire/CardPackage";
 import CardInverted from "@/components/aiquire/CardInverted";
 import CTASection from "@/components/aiquire/CTASection";
 import packages from "@/content/packages.json";
+import { InteractiveImageAccordion } from "@/components/ui/interactive-image-accordion";
+
+const accordionItems = [
+  {
+    id: 1,
+    title: "Starter Package",
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 2,
+    title: "Growth Package",
+    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+  },
+  {
+    id: 3,
+    title: "Business Package",
+    imageUrl: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 4,
+    title: "Enterprise Package",
+    imageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 5,
+    title: "Custom AI Package",
+    imageUrl: "https://images.unsplash.com/photo-1677442135136-760c813028c0?q=80&w=2070&auto=format&fit=crop"
+  }
+];
 
 export const metadata: Metadata = {
   title: "Packages — AIQUIRE",
@@ -32,24 +61,36 @@ export default function PackagesPage() {
   return (
     <>
       {/* 1. Hero */}
-      <SectionWrapper>
-        <ScrollAnimation>
-          <div className="pt-12 md:pt-20 pb-8">
-            <Eyebrow>Packages</Eyebrow>
-            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
-              Clear Scope. Fixed Price.
-              <br />
-              Real Outcomes.
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
-              Every AIQUIRE package is a fixed-scope engagement with defined
-              deliverables. You know what you&rsquo;re getting, what it costs,
-              and when it will be done. No retainers that run forever. No scope
-              creep that inflates invoices.
-            </p>
+      <section className="bg-transparent overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left Side: Text Content */}
+            <ScrollAnimation>
+              <div>
+                <Eyebrow>Packages</Eyebrow>
+                <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
+                  Clear Scope. Fixed Price.
+                  <br />
+                  Real Outcomes.
+                </h1>
+                <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
+                  Every AIQUIRE package is a fixed-scope engagement with defined
+                  deliverables. You know what you&rsquo;re getting, what it costs,
+                  and when it will be done. No retainers that run forever. No scope
+                  creep that inflates invoices.
+                </p>
+              </div>
+            </ScrollAnimation>
+
+            {/* Right Side: Illustration / Image Accordion */}
+            <ScrollAnimation delay={0.1}>
+              <div className="relative flex justify-center lg:justify-end h-full min-h-[400px]">
+                <InteractiveImageAccordion items={accordionItems} />
+              </div>
+            </ScrollAnimation>
           </div>
-        </ScrollAnimation>
-      </SectionWrapper>
+        </div>
+      </section>
 
       {/* 2. Entry Tier */}
       <SectionWrapper alt>

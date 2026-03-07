@@ -1,45 +1,143 @@
 {
   "main_nav": [
-    { "label": "Services", "href": "/services" },
-    { "label": "Packages", "href": "/packages" },
-    { "label": "Industries", "href": "/industries" },
-    { "label": "AI Academy", "href": "/academy" },
-    { "label": "Claude Training", "href": "/claude-training" },
-    { "label": "About", "href": "/about" },
-    { "label": "Contact", "href": "/contact" }
+    {
+      "label": "Services",
+      "href": "/services"
+    },
+    {
+      "label": "Packages",
+      "href": "/packages"
+    },
+    {
+      "label": "Industries",
+      "href": "/industries"
+    },
+    {
+      "label": "AI Academy",
+      "href": "/academy"
+    },
+    {
+      "label": "Claude Training",
+      "href": "/claude-training"
+    },
+    {
+      "label": "About",
+      "href": "/about",
+      "dropdown": "about_dropdown"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
+    }
+  ],
+  "about_dropdown": [
+    {
+      "label": "Our Methodology",
+      "href": "/our-methodology"
+    }
   ],
   "services_dropdown": [
-    { "label": "AI Strategy & Discovery", "href": "/services/ai-strategy" },
-    { "label": "AI Productivity & Copilots", "href": "/services/ai-productivity" },
-    { "label": "Customer & Revenue AI", "href": "/services/customer-revenue-ai" },
-    { "label": "Operations & Intelligence", "href": "/services/operations-intelligence" },
-    { "label": "Custom AI Development", "href": "/services/custom-ai-development" }
+    {
+      "label": "AI Strategy & Discovery",
+      "href": "/services/ai-strategy"
+    },
+    {
+      "label": "AI Productivity & Copilots",
+      "href": "/services/ai-productivity"
+    },
+    {
+      "label": "Customer & Revenue AI",
+      "href": "/services/customer-revenue-ai"
+    },
+    {
+      "label": "Operations & Intelligence",
+      "href": "/services/operations-intelligence"
+    },
+    {
+      "label": "Custom AI Development",
+      "href": "/services/custom-ai-development"
+    }
   ],
   "claude_training_dropdown": [
-    { "label": "Business Track", "href": "/claude-training/business-track" },
-    { "label": "Engineering Track", "href": "/claude-training/engineering-track" }
+    {
+      "label": "Business Track",
+      "href": "/claude-training/business-track"
+    },
+    {
+      "label": "Engineering Track",
+      "href": "/claude-training/engineering-track"
+    }
   ],
   "footer": {
     "navigate": [
-      { "label": "Home", "href": "/" },
-      { "label": "Services", "href": "/services" },
-      { "label": "Packages", "href": "/packages" },
-      { "label": "Industries", "href": "/industries" },
-      { "label": "AI Academy", "href": "/academy" },
-      { "label": "Claude Training", "href": "/claude-training" },
-      { "label": "About", "href": "/about" },
-      { "label": "Contact", "href": "/contact" }
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Services",
+        "href": "/services"
+      },
+      {
+        "label": "Packages",
+        "href": "/packages"
+      },
+      {
+        "label": "Industries",
+        "href": "/industries"
+      },
+      {
+        "label": "AI Academy",
+        "href": "/academy"
+      },
+      {
+        "label": "Claude Training",
+        "href": "/claude-training"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
+      }
     ],
     "resources": [
-      { "label": "AI Strategy & Discovery", "href": "/services/ai-strategy" },
-      { "label": "AI Productivity & Copilots", "href": "/services/ai-productivity" },
-      { "label": "Customer & Revenue AI", "href": "/services/customer-revenue-ai" },
-      { "label": "Operations & Intelligence", "href": "/services/operations-intelligence" },
-      { "label": "Custom AI Development", "href": "/services/custom-ai-development" }
+      {
+        "label": "AI Strategy & Discovery",
+        "href": "/services/ai-strategy"
+      },
+      {
+        "label": "AI Productivity & Copilots",
+        "href": "/services/ai-productivity"
+      },
+      {
+        "label": "Customer & Revenue AI",
+        "href": "/services/customer-revenue-ai"
+      },
+      {
+        "label": "Operations & Intelligence",
+        "href": "/services/operations-intelligence"
+      },
+      {
+        "label": "Custom AI Development",
+        "href": "/services/custom-ai-development"
+      }
     ],
     "legal": [
-      { "label": "Privacy Policy", "href": "/privacy" },
-      { "label": "Terms of Service", "href": "/terms" }
+      {
+        "label": "Privacy Policy",
+        "href": "/privacy"
+      },
+      {
+        "label": "Terms of Service",
+        "href": "/terms"
+      }
     ]
   },
   "cta": {
@@ -47,6 +145,9 @@
     "href": "/contact"
   },
   "external": {
-    "siprahub": { "label": "Siprahub", "href": "https://siprahub.com" }
+    "siprahub": {
+      "label": "Siprahub",
+      "href": "https://siprahub.com"
+    }
   }
 }
