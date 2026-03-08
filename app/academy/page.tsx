@@ -6,6 +6,36 @@ import Eyebrow from "@/components/aiquire/Eyebrow";
 import CardProgramme from "@/components/aiquire/CardProgramme";
 import CardInverted from "@/components/aiquire/CardInverted";
 import CTASection from "@/components/aiquire/CTASection";
+import { InteractiveImageAccordion } from "@/components/ui/interactive-image-accordion";
+
+const accordionItems = [
+
+  {
+    id: 1,
+    title: "AI Academy",
+    imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 2,
+    title: "Claude Training",
+    imageUrl: "https://images.unsplash.com/photo-1677442135136-760c813028c0?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 3,
+    title: "About AIQUIRE",
+    imageUrl: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 4,
+    title: "AI Innovation",
+    imageUrl: "https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 5,
+    title: "Industries",
+    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop"
+  }
+];
 
 export const metadata: Metadata = {
   title: "AI Academy — AIQUIRE",
@@ -68,39 +98,37 @@ export default function AcademyPage() {
   return (
     <>
       {/* 1. Hero */}
-      <SectionWrapper>
-        <ScrollAnimation>
-          <div className="pt-12 md:pt-20 pb-8">
-            <Eyebrow>AI Academy</Eyebrow>
-            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
-              Build AI Capability Inside
-              <br />
-              Your Organisation.
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
-              Technology without capability is a liability. The AIQUIRE AI
-              Academy ensures your people don&rsquo;t just have AI tools &mdash;
-              they know how to use them, champion them, and govern them.
-              Training that sticks, delivered by practitioners who&rsquo;ve
-              done the work.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex bg-[var(--color-cta)] text-white rounded px-8 py-3 text-sm font-medium hover:bg-[#002329] transition-colors"
-              >
-                Talk to an AI Consultant
-              </Link>
-              <Link
-                href="/packages"
-                className="inline-flex border border-[#002329] text-[#100d0d] rounded px-8 py-3 text-sm font-medium hover:bg-[#002329] hover:text-white transition-colors"
-              >
-                See Our Packages
-              </Link>
-            </div>
+      <section className="bg-transparent overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left Side: Text Content */}
+            <ScrollAnimation>
+              <div>
+                <Eyebrow>AI Academy</Eyebrow>
+                <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
+                  Build AI Capability Inside
+                  <br />
+                  Your Organisation.
+                </h1>
+                <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
+                  Technology without capability is a liability. The AIQUIRE AI
+                  Academy ensures your people don&rsquo;t just have AI tools &mdash;
+                  they know how to use them, champion them, and govern them.
+                  Training that sticks, delivered by practitioners who&rsquo;ve
+                  done the work.
+                </p>
+              </div>
+            </ScrollAnimation>
+
+            {/* Right Side: Illustration / Image Accordion */}
+            <ScrollAnimation delay={0.1}>
+              <div className="relative flex justify-center lg:justify-end h-full min-h-[400px]">
+                <InteractiveImageAccordion items={accordionItems} />
+              </div>
+            </ScrollAnimation>
           </div>
-        </ScrollAnimation>
-      </SectionWrapper>
+        </div>
+      </section>
 
       {/* 2. Context */}
       <SectionWrapper alt>
@@ -216,7 +244,7 @@ export default function AcademyPage() {
           ].map((item, i) => (
             <ScrollAnimation key={item.name} delay={i * 0.1}>
               <div className="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-6 h-full">
-                <span className="text-[#e5e5e5] font-bold text-4xl leading-none">
+                <span className="text-[#ce2124] font-bold text-4xl leading-none">
                   {item.step}
                 </span>
                 <h3 className="mt-3 font-display font-bold text-lg text-[#0d0d0d]">
@@ -241,3 +269,4 @@ export default function AcademyPage() {
     </>
   );
 }
+

@@ -34,7 +34,7 @@ export default function HeroSpline() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background: `
-              linear-gradient(to right, rgba(0,0,0,0.75) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.75) 100%),
+              linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.75) 100%),
               linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.92) 100%)
             `,
           }}
@@ -51,14 +51,12 @@ export default function HeroSpline() {
             AI Mastery & Deep Domain Expertise
           </p>
           <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-4xl lg:text-4xl text-white tracking-tight leading-snug">
-          AI for your business and tech.
-            <br />
-          Put where it matters. Driven by masters.
+            We put AI exactly where your
+            business accelerates.
+
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-white/75 max-w-xl">
-            Most businesses experiment with AI. Few truly own it. AIQUIRE
-            bridges the gap between what AI promises and what your business
-            actually needs.
+            Most businesses try AI everywhere and hope something works. We know exactly where it belongs in your business and tech — and we put it there, fast.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 pointer-events-auto">
             <Link

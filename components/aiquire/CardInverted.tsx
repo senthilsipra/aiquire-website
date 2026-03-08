@@ -21,23 +21,23 @@ export default function CardInverted({
   className,
 }: CardInvertedProps) {
   return (
-    <div className={cn("bg-[#002329] text-white rounded-lg p-8", className)}>
+    <div className={cn("bg-white text-[#100d0d] rounded-lg border border-[#e6e4e2] shadow-sm p-8", className)}>
       {eyebrow && (
-        <span className="inline-block bg-white/15 text-white text-xs font-medium px-3 py-1 rounded-full uppercase tracking-widest mb-4">
+        <span className="inline-block bg-[#fff8e8] text-[#002329] text-xs font-medium px-3 py-1 rounded-full uppercase tracking-widest mb-4">
           {eyebrow}
         </span>
       )}
       <h3 className="font-display font-bold text-2xl md:text-3xl">{title}</h3>
       {description && (
-        <p className="mt-3 text-white/80 text-base leading-relaxed">
+        <p className="mt-3 text-[#514f4f] text-base leading-relaxed">
           {description}
         </p>
       )}
       {list && list.length > 0 && (
         <ul className="mt-4 space-y-2">
           {list.map((item) => (
-            <li key={item} className="flex items-start gap-2 text-sm text-white/80">
-              <span className="mt-1 shrink-0 w-1.5 h-1.5 rounded-full bg-white/60" />
+            <li key={item} className="flex items-start gap-2 text-sm text-[#514f4f]">
+              <span className="mt-1 shrink-0 w-1.5 h-1.5 rounded-full bg-[#002329]" />
               {item}
             </li>
           ))}
@@ -46,7 +46,7 @@ export default function CardInverted({
       {ctaLabel && ctaHref && (
         <Link
           href={ctaHref}
-          className="mt-6 inline-flex bg-white text-[#002329] rounded-full px-6 py-2.5 text-sm font-medium hover:bg-white/90 transition-colors"
+          className="mt-6 inline-flex h-11 items-center justify-center whitespace-nowrap rounded bg-[var(--color-cta)] px-6 text-sm font-medium text-white hover:bg-[#002329] transition-colors"
         >
           {ctaLabel}
         </Link>
@@ -54,3 +54,5 @@ export default function CardInverted({
     </div>
   );
 }
+
+

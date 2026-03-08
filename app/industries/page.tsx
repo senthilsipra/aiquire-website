@@ -12,6 +12,35 @@ import IconCustomDev from "@/components/aiquire/illustrations/IconCustomDev";
 import IconManufacturing from "@/components/aiquire/illustrations/IconManufacturing";
 import IconGovernment from "@/components/aiquire/illustrations/IconGovernment";
 import industries from "@/content/industries.json";
+import { InteractiveImageAccordion } from "@/components/ui/interactive-image-accordion";
+
+const accordionItems = [
+  {
+    id: 1,
+    title: "Industries",
+    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 2,
+    title: "AI Academy",
+    imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 3,
+    title: "Claude Training",
+    imageUrl: "https://images.unsplash.com/photo-1677442135136-760c813028c0?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 4,
+    title: "About AIQUIRE",
+    imageUrl: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 5,
+    title: "AI Innovation",
+    imageUrl: "https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=2070&auto=format&fit=crop"
+  }
+];
 
 const industryIcons: Record<string, React.ReactNode> = {
   "professional-services": <IconProfessionalServices />,
@@ -40,27 +69,39 @@ export default function IndustriesPage() {
   return (
     <>
       {/* Hero */}
-      <SectionWrapper>
-        <ScrollAnimation>
-          <div className="pt-12 md:pt-20 pb-8">
-            <Eyebrow>Industries</Eyebrow>
-            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
-              We Know Your Industry.
-              <br />
-              We Know AI.
-              <br />
-              The Combination is Powerful.
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
-              Generic AI implementation fails because it ignores industry
-              context. AIQUIRE brings pre-built playbooks, sector-specific use
-              case libraries, and consultants who understand your regulatory
-              environment, your customer expectations, and your competitive
-              landscape.
-            </p>
+      <section className="bg-transparent overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left Side: Text Content */}
+            <ScrollAnimation>
+              <div>
+                <Eyebrow>Industries</Eyebrow>
+                <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#0d0d0d] tracking-tight">
+                  We Know Your Industry.
+                  <br />
+                  We Know AI.
+                  <br />
+                  The Combination is Powerful.
+                </h1>
+                <p className="mt-6 text-lg leading-relaxed text-[#404040] max-w-2xl">
+                  Generic AI implementation fails because it ignores industry
+                  context. AIQUIRE brings pre-built playbooks, sector-specific use
+                  case libraries, and consultants who understand your regulatory
+                  environment, your customer expectations, and your competitive
+                  landscape.
+                </p>
+              </div>
+            </ScrollAnimation>
+
+            {/* Right Side: Illustration / Image Accordion */}
+            <ScrollAnimation delay={0.1}>
+              <div className="relative flex justify-center lg:justify-end h-full min-h-[400px]">
+                <InteractiveImageAccordion items={accordionItems} />
+              </div>
+            </ScrollAnimation>
           </div>
-        </ScrollAnimation>
-      </SectionWrapper>
+        </div>
+      </section>
 
       {/* Industry Cards */}
       <SectionWrapper alt>

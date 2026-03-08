@@ -1,7 +1,7 @@
 export default function IconEducation() {
   return (
     <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="24" cy="24" r="20" fill="#fff8e8" stroke="#002329" strokeWidth="1.5" />
+      <circle cx="24" cy="24" r="20" fill="#ffffff" stroke="#002329" strokeWidth="1.5" />
       {/* Graduation cap */}
       <polygon points="24,12 10,20 24,28 38,20" fill="#002329" />
       <rect x="34" y="20" width="3" height="10" rx="1" fill="#002329" opacity="0.5" />

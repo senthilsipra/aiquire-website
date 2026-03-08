@@ -32,7 +32,7 @@ export default function CardProgramme({
   return (
     <div
       className={cn(
-        "bg-white rounded-lg border border-[#e6e4e2] shadow-sm p-8",
+        "bg-card rounded-lg border border-[#e6e4e2] shadow-sm p-8",
         className
       )}
     >

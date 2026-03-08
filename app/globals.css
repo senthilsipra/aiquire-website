@@ -54,7 +54,7 @@
   /* Backgrounds & surfaces */
   --background: #f9f6f4;          /* warm off-white — Browserbase --browserbase-white */
   --foreground: #100d0d;          /* near-black — Browserbase --color-black-offset */
-  --card: #ffffff;                /* white cards on warm page bg */
+  --card: #ffffff;                /* unified white card surface across all box/card components */
   --card-foreground: #100d0d;
   --popover: #ffffff;
   --popover-foreground: #100d0d;
@@ -125,3 +125,4 @@
     font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   }
 }
+

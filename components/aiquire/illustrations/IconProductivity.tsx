@@ -2,7 +2,7 @@ export default function IconProductivity() {
   return (
     <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       {/* Rocket */}
-      <circle cx="24" cy="24" r="20" fill="#fff8e8" stroke="#002329" strokeWidth="1.5" />
+      <circle cx="24" cy="24" r="20" fill="#ffffff" stroke="#002329" strokeWidth="1.5" />
       {/* Rocket body */}
       <path d="M24 10 C20 16, 18 22, 18 28 L24 34 L30 28 C30 22, 28 16, 24 10Z" fill="#002329" />
       {/* Window */}

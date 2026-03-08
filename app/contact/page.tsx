@@ -5,6 +5,35 @@ import ScrollAnimation from "@/components/aiquire/ScrollAnimation";
 import Eyebrow from "@/components/aiquire/Eyebrow";
 import CTASection from "@/components/aiquire/CTASection";
 import packages from "@/content/packages.json";
+import { InteractiveImageAccordion } from "@/components/ui/interactive-image-accordion";
+
+const accordionItems = [
+  {
+    id: 1,
+    title: "Industries",
+    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 2,
+    title: "AI Academy",
+    imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 3,
+    title: "Claude Training",
+    imageUrl: "https://images.unsplash.com/photo-1677442135136-760c813028c0?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 4,
+    title: "About AIQUIRE",
+    imageUrl: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 5,
+    title: "AI Innovation",
+    imageUrl: "https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=2070&auto=format&fit=crop"
+  }
+];
 
 export const metadata: Metadata = {
   title: "Get Started — AIQUIRE",
@@ -76,37 +105,49 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {/* 1. Hero */}
-      <SectionWrapper>
-        <ScrollAnimation>
-          <div className="pt-12 md:pt-20 pb-8">
-            <Eyebrow>Get Started</Eyebrow>
-            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#100d0d] tracking-tight">
-              Talk to an AI Consultant.
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#514f4f] max-w-2xl">
-              Not a chatbot. Not a sales rep reading from a script. A consultant
-              who will listen to your business challenge, tell you honestly where
-              AI can help, and recommend the right starting point &mdash; even if
-              it&rsquo;s smaller than you expected.
-            </p>
-            <div className="mt-6 max-w-2xl space-y-4">
-              <h2 className="font-display font-bold text-2xl md:text-3xl text-[#100d0d]">
-                What Happens When You Reach Out
-              </h2>
-              <p className="text-base leading-relaxed text-[#514f4f]">
-                We respond within one business day. Every initial conversation is
-                with an experienced AI consultant &mdash; not a business
-                development function. The goal of that first conversation is to
-                understand your business, not to sell you a package.
-              </p>
-              <p className="text-base leading-relaxed text-[#514f4f]">
-                If there&rsquo;s a fit, we&rsquo;ll recommend the right starting
-                point. If there isn&rsquo;t, we&rsquo;ll tell you that too.
-              </p>
-            </div>
+      <section className="bg-transparent overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left Side: Text Content */}
+            <ScrollAnimation>
+              <div>
+                <Eyebrow>Get Started</Eyebrow>
+                <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl text-[#100d0d] tracking-tight">
+                  Talk to an AI Consultant.
+                </h1>
+                <p className="mt-6 text-lg leading-relaxed text-[#514f4f] max-w-2xl">
+                  Not a chatbot. Not a sales rep reading from a script. A consultant
+                  who will listen to your business challenge, tell you honestly where
+                  AI can help, and recommend the right starting point &mdash; even if
+                  it&rsquo;s smaller than you expected.
+                </p>
+                <div className="mt-6 max-w-2xl space-y-4">
+                  <h2 className="font-display font-bold text-2xl md:text-3xl text-[#100d0d]">
+                    What Happens When You Reach Out
+                  </h2>
+                  <p className="text-base leading-relaxed text-[#514f4f]">
+                    We respond within one business day. Every initial conversation is
+                    with an experienced AI consultant &mdash; not a business
+                    development function. The goal of that first conversation is to
+                    understand your business, not to sell you a package.
+                  </p>
+                  <p className="text-base leading-relaxed text-[#514f4f]">
+                    If there&rsquo;s a fit, we&rsquo;ll recommend the right starting
+                    point. If there isn&rsquo;t, we&rsquo;ll tell you that too.
+                  </p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Right Side: Illustration / Image Accordion */}
+            <ScrollAnimation delay={0.1}>
+              <div className="relative flex justify-center lg:justify-end h-full min-h-[400px]">
+                <InteractiveImageAccordion items={accordionItems} />
+              </div>
+            </ScrollAnimation>
           </div>
-        </ScrollAnimation>
-      </SectionWrapper>
+        </div>
+      </section>
 
       {/* 2. Three Engagement Paths */}
       <SectionWrapper alt>
@@ -136,18 +177,18 @@ export default function ContactPage() {
           </ScrollAnimation>
 
           <ScrollAnimation delay={0.1} className="h-full">
-            <div className="bg-[#002329] text-white rounded-2xl p-8 flex flex-col h-full">
-              <h3 className="font-display font-bold text-2xl">
+            <div className="bg-white rounded-2xl border border-[#e5e5e5] shadow-sm p-8 flex flex-col h-full">
+              <h3 className="font-display font-bold text-2xl text-[#100d0d]">
                 Request a Proposal
               </h3>
-              <p className="mt-3 text-base leading-relaxed text-white/80 flex-1">
+              <p className="mt-3 text-base leading-relaxed text-[#514f4f] flex-1">
                 Know what you want? Tell us your requirements and we&rsquo;ll
                 prepare a scoped proposal with clear deliverables, timeline, and
                 investment.
               </p>
               <Link
                 href="#contact-form"
-                className="mt-6 inline-flex justify-center bg-white text-[#002329] rounded px-6 py-2.5 text-sm font-medium hover:bg-white/90 transition-colors"
+                className="mt-6 inline-flex justify-center bg-[var(--color-cta)] text-white rounded px-6 py-2.5 text-sm font-medium hover:bg-[#002329] transition-colors"
               >
                 Request a Proposal
               </Link>
@@ -275,3 +316,4 @@ export default function ContactPage() {
     </>
   );
 }
+
